@@ -33,7 +33,7 @@ const Registro = () => {
                                 </Form.Label>
                                 <Form.Control type='password'/>
                             </Form.Group>
-                            <Button className='mt-3' variant='warning'>Registrarse</Button>
+                            <Button className='mt-3' variant='warning' href='/'>Registrarse</Button>
                         </Form>
                     </Card.Body>
                 </Card>

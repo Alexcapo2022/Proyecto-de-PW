@@ -1,0 +1,134 @@
+
+.Footer{
+    width: 100%;
+    background-image: url("../imagenes/HR/Fondo_montañas.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0px;
+    height: 40vh;
+    color:white;
+    margin-right : 0 !important;
+    margin-left : 0 !important;
+    margin-bottom: 0 !important;
+    padding-right : 0 !important;
+    padding-left : 0 !important;
+    padding-bottom: 0 !important;
+    
+    margin-top: 60px;
+}
+
+.Footer h5{
+    margin-top: 30px;
+    margin-left: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#footer_subscribe{
+    display: inline-block;
+    width: 320px;
+    margin-left: 10px;
+    background-color: transparent;
+    height: 50px;
+    color:white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#subscribe_button{
+    margin-left: 10px;
+    color: white;
+    background-color:  #018ABE;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 5px;
+    border-color: transparent;
+    width: 130px;
+}
+
+.subscribe{
+    margin-top: 30px;
+}
+
+.subscribes{
+    display: inline-block;
+}
+
+.col_footer p{
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    font-size: 14px;
+}
+
+.col_footer{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+#iconos{
+    color:white;
+    display: inline-block;
+    margin: 10px;    
+}
+
+.copyright{
+    font-size: 10px;
+    text-align: right;
+    margin-left: 50px;
+}
+
+@media (max-width: 512px){
+    #logo{
+        height: 120px;
+        width: 100px;
+        margin-left: 20px;
+    }
+    
+    .Title{
+        margin-left: 20px;
+        margin-top: 0px;
+        width: 400px;
+    }
+    
+    .Subtitle{
+        margin-left: 20px;
+        margin-top: 30px;
+        width: 400px;
+    }
+
+    .Buttons{
+        margin-left: 10px;
+        margin-top: 25px;
+        width: 600px;
+        margin-bottom: 40px;
+    }
+    
+    .button{
+        display: inline-block;
+    }
+
+    #footer_subscribe{
+        display: inline-block;
+        width: 200px;
+        margin-left: 10px;
+        background-color: transparent;
+        height: 50px;
+        color:white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    #subscribe_button{
+        margin-left: 10px;
+        color: white;
+        background-color:  rgb(194, 91, 233);
+        text-decoration: none;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 15px;
+        text-align: center;
+        border-radius: 5px;
+        border-color: transparent;
+        width: 130px;
+        margin-top: 10px;
+    }
+
+}

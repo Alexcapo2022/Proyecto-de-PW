@@ -25,7 +25,7 @@ const Login = () => {
                             <Form.Group>
                             </Form.Group>
                             <Form.Group>
-                            <Button className='mt-2' variant='warning' >Login</Button>
+                            <Button className='mt-2' variant='warning' href='/PaginaPrincipal' >Login</Button>
                             </Form.Group>
                             <Form.Group>
                             <Form.Label>
