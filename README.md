@@ -1,1 +1,4 @@
-#proyectp-de-PW
+Alexander Cruz
+
+Hector Velarde
+
