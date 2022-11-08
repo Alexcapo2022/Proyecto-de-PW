@@ -1,0 +1,50 @@
+.btn{
+    background-color: #018ABE;
+    color: white;
+}
+.backgc{
+    background-color: #252525;
+}
+.txt{
+    font-family: 'Montserrat', sans-serif;
+    justify-content: start;
+}
+::placeholder{
+    color:rgb(236, 15, 15);
+    opacity: 1;
+}
+input{
+    color: white;
+}
+input:placeholder-shown, textarea:placeholder-shown{
+    background-color: transparent;
+    color: white;
+}
+.nah{
+    width: 700px;
+    height: 500px;
+}
+iframe{
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+  #foriframe{
+    height: 350px;
+  }
+  .comillas{
+    font-family:fantasy;
+    color: white;
+    font-size: 35px;
+  }
+  @media(max-width:1040px) {
+    #foriframe {
+        height: 200px;
+    }
+    .descrip{
+      font-size: 12px;
+    }
+    .cellp{
+        width: 100%;
+    }
+  }
