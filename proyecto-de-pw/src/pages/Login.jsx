@@ -23,18 +23,22 @@ const Login = () => {
                                 <Form.Control type='password'/>
                             </Form.Group>
                             <Form.Group>
+                            </Form.Group>
+                            <Form.Group>
+                            <Button className='mt-2' variant='warning' >Login</Button>
+                            </Form.Group>
+                            <Form.Group>
                             <Form.Label>
                                 
                                     ¿Olvidaste la contraseña?
                                     
                             </Form.Label>
-                            </Form.Group>
                             
-                            <Button className='mt-2' variant='warning' >Login</Button>
-                            
-                            <Form.Group>
+                        
+                        </Form.Group>
+                        <Form.Group>
                         <Form.Label className='mt-2'>
-                                    Crear Cuenta
+                        <Button className='mt-2' variant='warning' href='/Registro'>Registro</Button>
                             </Form.Label>
                         </Form.Group>
                         </Form>

@@ -5,6 +5,7 @@ import Login from './pages/Login'
 import NavBar from './components/NavBar';
 import NotFoundPage from './pages/NotFoundPage';
 import Reviews from './pages/Reviews';
+import Registro from './pages/Registro';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -16,6 +17,7 @@ root.render(
   <Routes>
     <Route path='/PaginaPrincipal' element={<PaginaPrincipal />}/>
     <Route path='/' element={<Login />}/>
+    <Route path='/Registro' element={<Registro />}/>
     <Route path='*' element={<NotFoundPage />}/>
     <Route path='/Reviews' element={<Reviews/>}/>
   </Routes>
