@@ -33,7 +33,7 @@ const About =() =>{
         </Row>
         <Row xs={1} className="justify-content-md-center w-80">
             <Row className="fondoA" >
-                <Row className="button"><Nav.Link href=""><Button id="Boton_h15"><strong>Let's Build</strong></Button></Nav.Link>
+                <Row className="button"><Nav.Link href=""><Button id="Boton_h15">Let's Build</Button></Nav.Link>
                 </Row>
             </Row>
         </Row>

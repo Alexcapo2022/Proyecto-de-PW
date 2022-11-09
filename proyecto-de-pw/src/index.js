@@ -8,6 +8,7 @@ import Reviews from './pages/Reviews';
 import Registro from './pages/Registro';
 import Footer from './components/Footer';
 import About from './pages/About';
+import ArmadoPrincipiantes from './pages/ArmadoPrincipiantes';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -19,6 +20,7 @@ root.render(
   <BrowserRouter>
   <Routes>
     <Route path='/PaginaPrincipal' element={<PaginaPrincipal />}/>
+    <Route path='/ArmadoPrincipiantes' element={<ArmadoPrincipiantes />}/>
     <Route path='/' element={<Login />}/>
     <Route path='/Registro' element={<Registro />}/>
     <Route path='/About' element={<About />}/>

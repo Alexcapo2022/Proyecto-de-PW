@@ -8,10 +8,10 @@ const  PaginaPrincipal = () => {
               <section id="hero">
                 <h1>Build your PC! <br />Just for what you need! </h1>
                 <section id="hero2">
-                  <a href="/armadoPrincipiantes.html">
+                  <a href="/ArmadoPrincipiantes">
                     <button className="index_button">Build for begginers</button>
                   </a>
-                  <a href="/Build Begginers/INTERFACES/Advanced.html"><button className="index_button">Advanced building</button></a>
+                  <a href="/ArmadoAvanzado"><button className="index_button">Advanced building</button></a>
                 </section>
               </section>
               <section id="Signup">
