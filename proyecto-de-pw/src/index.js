@@ -9,6 +9,10 @@ import Registro from './pages/Registro';
 import Footer from './components/Footer';
 import About from './pages/About';
 import ArmadoPrincipiantes from './pages/ArmadoPrincipiantes';
+import Support from './pages/Support';
+import Guides from './pages/SupportElements/Guides';
+import Faq from './pages/SupportElements/Faq';
+import SubmitTicket from './pages/SupportElements/SubmitTicket';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -26,6 +30,11 @@ root.render(
     <Route path='/About' element={<About />}/>
     <Route path='*' element={<NotFoundPage />}/>
     <Route path='/Reviews' element={<Reviews/>}/>
+    <Route path='/Support' element={<Support/>}/>
+    <Route path='/Support/Guides' element={<Guides/>}/>
+    <Route path='/Support/Faq' element={<Faq/>}/>
+    <Route path='/Support/SubmitTicket' element={<SubmitTicket/>}/>
+
   </Routes>
   </BrowserRouter>
   <Footer/>
