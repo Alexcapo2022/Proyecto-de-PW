@@ -297,3 +297,99 @@ footer p{
     background-image: url("/src/imagenes/garantia.jpg");
    
 }
+
+    
+
+.container_index img{
+    width: 20px;
+    height: 20px;
+}
+footer {
+    background-color: rgb(230,230,230);
+}
+footer p{
+    margin: 0;
+    padding: 12px;
+    
+    color:rgb(100,100,100)
+}
+
+@media (min-width: 720px){
+    header{
+        position:fixed;
+        width:100%;
+    }
+    header .container_index{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right:20px;
+    }
+    #Signup .container_index{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    #Signup .texto{
+       width: 50%;
+       max-width: 600px;
+        text-align: initial;
+        padding: 0px 30px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #Signup .texto2{
+        width: 50%;
+        max-width: 600px;
+         text-align: initial;
+         padding: 0px 30px;
+         display:flex;
+         flex-direction: column;
+         justify-content: center;
+     }
+    #Signup h2{
+        margin-top: 0px;
+    }
+    #Signup .img-container{
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)
+    ),url("/src/imagenes/Setup.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 400px;
+
+    }
+    
+    
+    
+    #nuestrosProductos .productos{
+        display: flex;
+        justify-content: center;
+
+    }
+    #caracteristicas .container_index{
+        display:flex;
+    }
+    #nuestrosProductos p{
+        display: block;
+        margin-bottom:30 px;
+    }
+    #nuestrosProductos h3{
+        margin-top: 0;
+    }
+}
+
+.container_index .garantia{
+    height: 500px;
+    width: 500px;
+    left: 50%;
+    background-image: url("/src/imagenes/garantia.jpg");
+   
+}

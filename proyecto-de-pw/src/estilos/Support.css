@@ -1,0 +1,84 @@
+a{
+    color:white;
+}
+#content-support{
+    width: 80%;
+    color:#018ABE;
+    margin-right: auto;
+    margin-left: auto;
+}
+#content-support-hub{
+    margin-top: 10%;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+#content-support-hub-button{
+    padding: 20px;
+    background-color:#37474f;
+    color:white;
+    width: 80%;
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#content-support-hub-button img{
+    height: 80px;
+    margin-bottom: 30px;
+}
+#content-support-guide-row{
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 15px;
+    
+}
+#content-support-guide-row button{
+    width: 100%;
+    text-align: left;
+}
+#content-support-guide-col{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+    
+    
+}
+
+#content-support-submit{
+    background-color: white;
+    width: 60%;
+    color:black;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content-support-submit input{
+    width: 100%;
+    border: 1px solid lightgray;
+    margin-bottom: 5px;
+}
+#content-support-submit button{
+    background-color: #018ABE;
+    color:black;
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+}
+#searchPopupLine{
+    border-top:1px solid lightgray;
+    margin-top: 10px;
+    padding:5px;
+}
+#content-support-guide-row-1{
+    background-color: #4AB4DD;
+    border: 1px solid lightgray;
+    padding: 15px;
+    color:black;
+}   
+
+
+
+

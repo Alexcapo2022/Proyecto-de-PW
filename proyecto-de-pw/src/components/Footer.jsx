@@ -21,7 +21,7 @@ import "../estilos/Footer.css"
                                 <input type="email" className="form-control" id="footer_subscribe" placeholder="Email" />
                             </Col>
                             <Col  className="subscribes">
-                                <Nav.Link href=""><Button type="submit" id="subscribe_button">SUBSCRIBE</Button></Nav.Link>
+                                <Nav.Link href=""><Button type="submit" id="subscribe_button">SUBSCRIBIRSE</Button></Nav.Link>
                             </Col>
                         </Col>
                     </Col>
