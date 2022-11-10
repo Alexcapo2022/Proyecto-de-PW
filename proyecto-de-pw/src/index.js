@@ -13,6 +13,7 @@ import Support from './pages/Support';
 import Guides from './pages/SupportElements/Guides';
 import Faq from './pages/SupportElements/Faq';
 import SubmitTicket from './pages/SupportElements/SubmitTicket';
+import RankingPerifericos from './pages/RankingPerifericos';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -34,6 +35,7 @@ root.render(
     <Route path='/Support/Guides' element={<Guides/>}/>
     <Route path='/Support/Faq' element={<Faq/>}/>
     <Route path='/Support/SubmitTicket' element={<SubmitTicket/>}/>
+    <Route path='/RankingPerifericos' element={<RankingPerifericos/>}/>
 
   </Routes>
   </BrowserRouter>
