@@ -15,8 +15,11 @@ import Faq from './pages/SupportElements/Faq';
 import SubmitTicket from './pages/SupportElements/SubmitTicket';
 import RankingPerifericos from './pages/RankingPerifericos';
 import RankingPc from './pages/RankingPc';
+import User from './pages/User';
+
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -38,6 +41,8 @@ root.render(
     <Route path='/Support/SubmitTicket' element={<SubmitTicket/>}/>
     <Route path='/RankingPerifericos' element={<RankingPerifericos/>}/>
     <Route path='/RankingPc' element={<RankingPc/>}/>
+    <Route path='/User' element={<User/>}/>
+    
     
 
   </Routes>

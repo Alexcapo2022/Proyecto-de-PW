@@ -6,6 +6,7 @@ import Nav from "react-bootstrap/Nav"
 import "../estilos/About.css";
 import imagen15 from "../imagenes/HR/coding.png";
 
+
 const About =() =>{
 
     return(
