@@ -1,7 +1,11 @@
 a{
     color:white;
 }
+input{
+    color:black;
+}
 #content-support{
+    
     width: 80%;
     color:#018ABE;
     margin-right: auto;
@@ -30,7 +34,7 @@ a{
     margin-bottom: 30px;
 }
 #content-support-guide-row{
-    background-color: white;
+    background-color: black;
     border: 1px solid lightgray;
     padding: 15px;
     

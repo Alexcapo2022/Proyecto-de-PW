@@ -1,7 +1,7 @@
 import { Card, Form, Button, Container, Row, Col} from 'react-bootstrap'
 
 const Registro = () => {
-    return <Container>
+    return <body className='login'><Container>
         <Row className='mt-4'>
             <Col></Col>
             <Col>
@@ -41,6 +41,7 @@ const Registro = () => {
             <Col></Col>
         </Row>
     </Container>
+    </body>
 }
 
 export default Registro

@@ -1,7 +1,11 @@
 import { Card, Form, Button, Container, Row, Col, Image } from 'react-bootstrap'
 import "bootstrap"
+import '../estilos/login.css'
 const Login = () => {
-    return <Container>
+    
+    return(
+    <body className='login'>
+    <Container>
         <Row className='mt-4'>
             <Col></Col>
             <Col>
@@ -50,6 +54,9 @@ const Login = () => {
             <Col></Col>
         </Row>
     </Container>
+    </body>
+    )
+    
 }
 
 export default Login
