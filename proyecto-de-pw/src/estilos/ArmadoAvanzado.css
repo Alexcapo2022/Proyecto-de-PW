@@ -1,0 +1,488 @@
+.content-advanced-categories-grid-col{
+    background-color: #4AB4DD;
+    color:white;
+    padding:10px;
+    border-radius: 5px;
+    margin:5px;
+    width:100%;
+    height: 100%;
+}
+.content-advanced-buyCard{
+    display:flex;
+    justify-content:space-between;
+    flex-direction:row;
+    height:100px;
+    padding:10px;
+    background-color: lightgray;
+    color:black;
+    border-radius: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.content-advanced-buyCard img{
+    width: 60px;
+    margin-right: 10px;
+}
+.content-advanced-buyCard-text{
+    text-align: left;
+    width:70%;
+}
+.content-advanced-buyCard-text-price{
+    margin-top:-20px;
+}
+.content-advanced-buyCard-addButton{
+    border-radius:100px;
+    background-color:#4AB4DD;
+    height:40px;
+    width:40px;
+    color:white;
+}
+.buyList{
+    background-color:rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+}
+.botonAA1{
+    color: white;
+    background-color:  #4AB4DD;
+    text-decoration: none;
+    padding: 5px 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-align: left;
+    border-radius: 5px;
+    border-color: transparent;
+    width: 150px;
+    height: 40px;
+    
+    margin-top: 10px;
+    margin-right: 15px;
+    text-align: center;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: #4AB4DD;
+    font-weight: bold;
+   
+}
+.botonAA_2{
+    
+    
+    text-decoration: none;
+    padding: 5px 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    text-align: left;
+    border-radius: 5px;
+    border-color: transparent;
+    width: 150px;
+    height: 40px;
+    
+    margin-top: 10px;
+    margin-right: 15px;
+    text-align: center;
+    border-radius: 10px;
+    border:1px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: black;
+    background-color: white;
+    font-weight: bold;
+   
+}
+b{
+    color: black;
+    text-align: left;
+}
+
+.buyList{
+    background-color:rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 10px;
+}
+#content-user{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:100px;
+}
+#content-user-buttons{
+    background-color: white;
+    padding: 30px;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+#content-user-info{
+    background-color: white;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    padding:20px;
+}
+.content-user-button-selected{
+    border-left: solid 15px lightblue !important;
+}
+#searchbar{
+    display: flex;
+    right:20%;
+    z-index: 2;
+}
+#searchbar button{
+    color:white;
+    margin-right: 10px;
+    border-radius: 25px;
+    font-weight: bold;
+
+}
+#searchbar input{
+    border-radius: 25px;
+    padding: 5px;
+    border:none;
+
+}
+#content-support{
+    width: 80%;
+    color:white;
+    margin-right: auto;
+    margin-left: auto;
+}
+#content-support-hub{
+    margin-top: 10%;
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+}
+#content-support-hub-button{
+    padding: 20px;
+    background-color:#37474f;
+    color:white;
+    width: 80%;
+    border-radius: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#content-support-hub-button img{
+    height: 80px;
+    margin-bottom: 30px;
+}
+#content-support-guide-row{
+    background-color: white;
+    border: 1px solid lightgray;
+    padding: 15px;
+    
+}
+#content-support-guide-row button{
+    width: 100%;
+    text-align: left;
+}
+#content-support-guide-col{
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#content-support-submit{
+    background-color: white;
+    width: 60%;
+    color:black;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content-support-submit input{
+    width: 100%;
+    border: 1px solid lightgray;
+    margin-bottom: 5px;
+}
+
+.Formulario {
+
+    margin: auto;
+    width: 40%;
+    padding: 20px;
+    border-radius: 2%;
+    background-color: #221268;
+    color: white;
+}
+.Formulario h1{
+    font-family: "Bebas Neue";
+}
+.Formulario input{
+    background-color: transparent;
+    color:white;
+    border: 1px solid white;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    margin-top:10px;
+    padding: 10px;
+}
+#loginButton{
+    background-color: white;
+    color:rgb(30, 2, 94);
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    font-family: "Bebas Neue";
+    font-size: 25px;
+}
+.Parrafo2{
+    margin-top: 50px;
+}
+.Cuadrado{
+    width: 1500px;/*ancho*/
+    height: 370px;/*alto*/
+    margin-top: 30px;
+    background-color: rgb(59, 59, 59);
+}
+.content-about{
+    color: black;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    width: 100%;
+    background-color: white;
+    font-family: "Bebas Neue";
+    padding-top:20px;
+    
+}
+.content-about h1{
+    font-size: 60px;
+    width: 55%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 10%;
+}
+#content-about-subText{
+    width: 40%;
+    font-size: 50px;
+    margin-left: 50%;
+    text-align: left;
+}
+#content-about-black{
+    background-color: #1d262a;
+    margin-top:-30px;
+    padding-bottom: 100px;
+    margin-bottom: -50px;
+}
+
+.PC{
+    margin-top:-300px;
+    width: 40%;
+    margin-left: 5%;
+    filter:drop-shadow(2px 2px 30px lightblue)
+}
+.About-Parrafo2{
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    text-align: left;
+    right: 20px;
+    width: 600px;
+    
+}
+
+#content-reviews-background{
+    background-color: white;
+    min-height: 70vh;
+    margin-bottom: -50px;
+    width:100%;
+}
+#content-reviews-content{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    
+}
+#content-reviews-content h1{
+    margin-bottom: 50px;
+}
+#content-reviews-content h2{
+    margin-right: 40px;
+}
+
+#content-reviews-content img{
+    height: 40px;
+}
+#content-reviews-card{
+    border-bottom: 1px solid lightgray;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#content-reviews-card p{
+    margin-left: 20px;
+   
+}
+#content-reviews-button{
+    background-color: #ba68c8;
+    color:white;
+    font-size: 20px;
+    border-radius: 10px;
+    margin-top:30px;
+    padding:10px;
+}
+
+#content-ranking{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
+    color:white;
+}
+#content-ranking h1{
+    margin-bottom:40px;
+}
+#content-ranking-selection{
+   font-weight: bold;
+   color:white;
+   border: 1px solid white;
+   width: 100px;
+   border-radius: 10px;
+   margin-right: 20px;
+}
+#rankingCard{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    color:#1d262a;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    margin-top:20px;
+    align-items: center;
+    padding: 10px;
+    width: 60%;
+}
+#rankingCard img{
+    height: 80px;
+    width: 80px;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+#rankingCard h2{
+    font-size: 20px;
+    width: 70%;
+}
+#rankingCard p{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+#content-user-profile{
+    background-color: #ba68c8;
+    color:white;
+    font-size: 15px;
+    border-radius: 10px;
+    padding:10px;
+}
+#YT{
+    border-radius: 15px;
+    width: 60% !important;
+    height: auto !important;
+    margin-right: auto;
+    margin-left: auto;
+    border: 5px solid lightblue;
+}
+
+.Titulo2{
+    color: white;
+    font-size: 35px;
+    text-align: justify;
+    color:black;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.Titulo2 h2{
+    margin-top: 30px;
+    margin-left: 40px;
+}
+
+.center{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#content-user-icon{
+    border-radius: 100px;
+    background-color: lightblue;
+    padding: 20px;
+    width: 100px;
+    height: 100px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#thankCard{
+    color:black;
+    background-color: white;
+    position: fixed;
+    padding: 0px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30%;
+    top:10%;
+    z-index: 100;
+    
+    left:35%;
+}
+#thankCard h1{
+    width: 100%;
+    text-align: center;
+}
+#thankCard img{
+    border-radius: 20px;
+    width: 50%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+#thankCard div{
+    width:"100px";
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+}
+#thankCard h2{
+    margin-right: 20px;
+}
+#thankCardstar{
+    height: 40px !important;
+    width: 40px !important;
+    border-radius: 0 !important;
+}
+
+#thankCard textarea{
+    padding:10px;
+    border:1px solid lightgray;
+}
+#thankCardbutton{
+    background-color: #4AB4DD;
+    color:white;
+    padding:20px;
+    margin-top:20px;
+    border-radius: 10px;
+    font-weight: bold;
+    width:100%;
+}
+#historyCard{
+    border-bottom: 1px solid lightgray;
+    padding:10px;
+}
+#historyCard img{
+    width: 80px !important;
+    margin-right: 30px;
+}
+
+
+
+

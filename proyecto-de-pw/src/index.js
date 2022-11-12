@@ -16,6 +16,9 @@ import SubmitTicket from './pages/SupportElements/SubmitTicket';
 import RankingPerifericos from './pages/RankingPerifericos';
 import RankingPc from './pages/RankingPc';
 import User from './pages/User';
+import ArmadoAvanzado from './pages/ArmadoAvanzado'
+import Carrito from './pages/Carrito';
+import Compra from './pages/Compra';
 
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -42,6 +45,9 @@ root.render(
     <Route path='/RankingPerifericos' element={<RankingPerifericos/>}/>
     <Route path='/RankingPc' element={<RankingPc/>}/>
     <Route path='/User' element={<User/>}/>
+    <Route path='/ArmadoAvanzado' element={<ArmadoAvanzado/>}/>
+    <Route path='/Carrito' element={<Carrito/>}/>
+    <Route path='/Compra' element={<Compra/>}/>
     
     
 
