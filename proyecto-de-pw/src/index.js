@@ -19,6 +19,7 @@ import User from './pages/User';
 import ArmadoAvanzado from './pages/ArmadoAvanzado'
 import Carrito from './pages/Carrito';
 import Compra from './pages/Compra';
+import BeginnerRecommendation from './pages/BeginnerRecommendation'
 
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
@@ -48,6 +49,7 @@ root.render(
     <Route path='/ArmadoAvanzado' element={<ArmadoAvanzado/>}/>
     <Route path='/Carrito' element={<Carrito/>}/>
     <Route path='/Compra' element={<Compra/>}/>
+    <Route path='/ArmadoPrincipantes/Recomendacion' element={<BeginnerRecommendation/>}/>
     
     
 

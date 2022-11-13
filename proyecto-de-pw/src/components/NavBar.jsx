@@ -40,7 +40,7 @@ function NavBar() {
                 </Form>
           <Nav>
           <Nav.Link href="/User" id="icons"><FontAwesomeIcon icon={faUser} /></Nav.Link>
-          <Nav.Link href="/Car" id="icons"><FontAwesomeIcon icon={faCartShopping} color="white"/></Nav.Link>
+          <Nav.Link href="/Carrito" id="icons"><FontAwesomeIcon icon={faCartShopping} color="white"/></Nav.Link>
           
           
                 

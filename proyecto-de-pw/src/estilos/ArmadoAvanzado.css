@@ -106,23 +106,8 @@ b{
     margin-right: auto;
     margin-top:100px;
 }
-#content-user-buttons{
-    background-color: white;
-    padding: 30px;
-    font-size: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-#content-user-info{
-    background-color: white;
-    border-radius: 10px;
-    margin-right: auto;
-    margin-left: auto;
-    padding:20px;
-}
-.content-user-button-selected{
-    border-left: solid 15px lightblue !important;
-}
+
+
 #searchbar{
     display: flex;
     right:20%;
@@ -199,152 +184,9 @@ b{
     margin-bottom: 5px;
 }
 
-.Formulario {
 
-    margin: auto;
-    width: 40%;
-    padding: 20px;
-    border-radius: 2%;
-    background-color: #221268;
-    color: white;
-}
-.Formulario h1{
-    font-family: "Bebas Neue";
-}
-.Formulario input{
-    background-color: transparent;
-    color:white;
-    border: 1px solid white;
-    border-radius: 10px;
-    margin-bottom: 10px;
-    width: 100%;
-    margin-top:10px;
-    padding: 10px;
-}
-#loginButton{
-    background-color: white;
-    color:rgb(30, 2, 94);
-    padding: 10px;
-    width: 100%;
-    border-radius: 10px;
-    font-family: "Bebas Neue";
-    font-size: 25px;
-}
-.Parrafo2{
-    margin-top: 50px;
-}
-.Cuadrado{
-    width: 1500px;/*ancho*/
-    height: 370px;/*alto*/
-    margin-top: 30px;
-    background-color: rgb(59, 59, 59);
-}
-.content-about{
-    color: black;
-    text-align: center;
-    margin-right: auto;
-    margin-left: auto;
-    width: 100%;
-    background-color: white;
-    font-family: "Bebas Neue";
-    padding-top:20px;
-    
-}
-.content-about h1{
-    font-size: 60px;
-    width: 55%;
-    margin-right: auto;
-    margin-left: auto;
-    margin-bottom: 10%;
-}
-#content-about-subText{
-    width: 40%;
-    font-size: 50px;
-    margin-left: 50%;
-    text-align: left;
-}
-#content-about-black{
-    background-color: #1d262a;
-    margin-top:-30px;
-    padding-bottom: 100px;
-    margin-bottom: -50px;
-}
 
-.PC{
-    margin-top:-300px;
-    width: 40%;
-    margin-left: 5%;
-    filter:drop-shadow(2px 2px 30px lightblue)
-}
-.About-Parrafo2{
-    position: absolute;
-    color: white;
-    font-size: 40px;
-    text-align: left;
-    right: 20px;
-    width: 600px;
-    
-}
 
-#content-reviews-background{
-    background-color: white;
-    min-height: 70vh;
-    margin-bottom: -50px;
-    width:100%;
-}
-#content-reviews-content{
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 20px;
-    
-}
-#content-reviews-content h1{
-    margin-bottom: 50px;
-}
-#content-reviews-content h2{
-    margin-right: 40px;
-}
-
-#content-reviews-content img{
-    height: 40px;
-}
-#content-reviews-card{
-    border-bottom: 1px solid lightgray;
-    padding-top: 20px;
-    padding-bottom: 20px;
-}
-#content-reviews-card p{
-    margin-left: 20px;
-   
-}
-#content-reviews-button{
-    background-color: #ba68c8;
-    color:white;
-    font-size: 20px;
-    border-radius: 10px;
-    margin-top:30px;
-    padding:10px;
-}
-
-#content-ranking{
-    width: 80%;
-    margin-right: auto;
-    margin-left: auto;
-    padding: 20px;
-    color:white;
-}
-#content-ranking h1{
-    margin-bottom:40px;
-}
-#content-ranking-selection{
-   font-weight: bold;
-   color:white;
-   border: 1px solid white;
-   width: 100px;
-   border-radius: 10px;
-   margin-right: 20px;
-}
 #rankingCard{
     background-color: white;
     display: flex;
@@ -482,6 +324,43 @@ b{
     width: 80px !important;
     margin-right: 30px;
 }
+
+
+#content-beginner-grid-col{
+    text-align: center;  
+    margin-right:60px;
+}
+#content-beginner-grid-col button{
+    height: 100%;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+    padding:30px;
+    background-color:green;
+    border-radius: 10px;
+    border: 3px solid transparent;
+}
+#content-beginner-grid-col img{
+    width: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+}
+#content-beginner-grid-row{
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+#content-beginner-recommendation-grid-row{
+    margin-top:50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 
 
 
