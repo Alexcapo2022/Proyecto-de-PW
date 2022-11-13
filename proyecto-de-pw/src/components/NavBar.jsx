@@ -10,6 +10,7 @@ import {faUser} from "@fortawesome/free-solid-svg-icons"
 import {faCartShopping} from "@fortawesome/free-solid-svg-icons"
 
 
+
 function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -36,11 +37,11 @@ function NavBar() {
                     className="me-2"
                     aria-label="Search"
                   />
-                  <Button id="icons"><FontAwesomeIcon icon={faMagnifyingGlass} /></Button>
+                  <Button id="icons" href="Buscar"><FontAwesomeIcon icon={faMagnifyingGlass} /></Button>
                 </Form>
           <Nav>
           <Nav.Link href="/User" id="icons"><FontAwesomeIcon icon={faUser} /></Nav.Link>
-          <Nav.Link href="/Car" id="icons"><FontAwesomeIcon icon={faCartShopping} color="white"/></Nav.Link>
+          <Nav.Link href="/Carrito" id="icons"><FontAwesomeIcon icon={faCartShopping} color="white"/></Nav.Link>
           
           
                 

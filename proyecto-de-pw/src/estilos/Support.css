@@ -34,7 +34,7 @@ input{
     margin-bottom: 30px;
 }
 #content-support-guide-row{
-    background-color: black;
+    background-color: white;
     border: 1px solid lightgray;
     padding: 15px;
     
@@ -81,7 +81,9 @@ input{
     border: 1px solid lightgray;
     padding: 15px;
     color:black;
-}   
+}
+
+
 
 
 
