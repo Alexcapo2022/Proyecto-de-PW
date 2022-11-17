@@ -4,6 +4,6 @@ Hector Velarde
 
 Danah Marquez 🪷
 
-Rodrigo Linares
+Rodrigo Linares 🌶
 
 
