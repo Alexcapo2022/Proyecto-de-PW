@@ -2,7 +2,7 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const cors = require("cors")
 
-const { Usuario,Compra,Categoria } = require("./dao")
+const { Usuario,Compra,Categoria,Producto } = require("./dao")
 
 const PUERTO = 4444
 
@@ -21,11 +21,18 @@ app.get("/usuarios",async (req,resp) => {
     resp.send(listaUsuarios)
 })
 //2 Mostrar Categorias
-//1 primer get
+//
 app.get("/categorias",async (req,resp) => {
     const listaCategorias = await Categoria.findAll()
 
     resp.send(listaCategorias)
+})
+
+// Mostrar Productos
+app.get("/productos",async (req,resp) => {
+    const listaProductos = await Producto.findAll()
+
+    resp.send(listaProductos)
 })
 
 app.listen(PUERTO, () => { 

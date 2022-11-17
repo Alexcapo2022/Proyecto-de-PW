@@ -19,7 +19,7 @@ const Usuario = sequelize.define("usuario",{
     },
     Apellido : {
         type : DataTypes.STRING(150),
-        allowNull : false
+        allowNull : true
     },
     Correo : {
         type : DataTypes.STRING(200),
@@ -35,15 +35,15 @@ const Usuario = sequelize.define("usuario",{
     },
     Pais : {
         type : DataTypes.STRING(100),
-        allowNull : false
+        allowNull : true
     },
     Direccion : {
         type : DataTypes.STRING(200),
-        allowNull : false
+        allowNull : true
     },
     Celular : {
         type : DataTypes.NUMERIC(9),
-        allowNull : false
+        allowNull : true
     },
     id_compra : {
         type : DataTypes.UUID,
@@ -89,6 +89,80 @@ const Compra = sequelize.define("compra",{
     freezeTableName : true
 
 })
+const Detalle_Compra = sequelize.define("detalle_compra",{
+    id : {
+        primaryKey : true,
+        type : DataTypes.UUID,
+        defaultValue : Sequelize.UUIDV4
+    },
+    Cantidad : {
+        type : DataTypes.NUMERIC(10),
+        allowNull : true
+    },
+    Precio : {
+        type : DataTypes.NUMERIC(10),
+        allowNull : true
+    },
+    Igv : {
+        type : DataTypes.NUMERIC(10),
+        allowNull : true
+    },
+    Descuento : {
+        type : DataTypes.NUMERIC(10),
+        allowNull : true
+    },
+    Total : {
+        type : DataTypes.NUMERIC(10),
+        allowNull : true
+    },
+    id_producto : {
+        type : DataTypes.UUID,
+        allowNull : true
+    },
+    Nombre_Producto : {
+        type : DataTypes.NUMERIC(10),
+        allowNull : false
+    }
+
+}, {
+    timestamps : false,
+    freezeTableName : true
+
+})
+const Producto = sequelize.define("producto",{
+    id : {
+        primaryKey : true,
+        type : DataTypes.UUID,
+        defaultValue : Sequelize.UUIDV4
+    },
+    SKU : {
+        type : DataTypes.STRING(12),
+        allowNull : false
+    },
+    Nombre : {
+        type : DataTypes.STRING(100),
+        allowNull : false
+    },
+    Precio : {
+        type : DataTypes.NUMERIC(10),
+        allowNull : true
+    },
+    Descripcion : {
+        type : DataTypes.STRING(200),
+        allowNull : false
+    },
+    Stock : {
+        type : DataTypes.NUMERIC(5),
+        allowNull : true
+    },
+    id_categoria : {
+        type : DataTypes.UUID,
+        allowNull : true
+    }
+}, {
+    timestamps : false,
+    freezeTableName : true
+})
 const Categoria = sequelize.define("categoria",{
     id : {
         primaryKey : true,
@@ -113,7 +187,32 @@ Usuario.hasMany(Compra, {
     foreignKey : "id"
 })
 
+// Relaciones
+// Compra * <----> 1 DetalleCompra
+Compra.belongsTo(Detalle_Compra, {
+    foreignKey : "id_detalleCompra"
+})
+Detalle_Compra.hasMany(Compra, {
+    foreignKey : "id"
+})
+
+// Relaciones
+// Producto * <----> 1 Categoria
+Categoria.belongsTo(Producto, {
+    foreignKey : "categoria_id"
+})
+Producto.hasMany(Categoria, {
+    foreignKey : "id"
+})
+//detalleCompra * <---> 1 producto
+Detalle_Compra.belongsTo(Producto, {
+    foreignKey : "id_producto"
+})
+Producto.hasMany(Detalle_Compra, {
+    foreignKey : "id"
+})
+
 
 module.exports = {
-    Usuario,Compra,Categoria
+    Usuario,Compra,Categoria,Producto,Detalle_Compra
 }
