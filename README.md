@@ -2,7 +2,8 @@ Alexander Cruz
 
 Hector Velarde
 
-Danah Marquez
+Danah Marquez 🪷
 
-Rodrigo Linares
+Rodrigo Linares 🌶
+
 
