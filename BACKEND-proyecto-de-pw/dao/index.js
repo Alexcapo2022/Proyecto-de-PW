@@ -58,6 +58,73 @@ const Usuario = sequelize.define("usuario",{
     timestamps : false,
     freezeTableName : true
 })
+const Reporte = sequelize.define("reporte",{
+    id : {
+        primaryKey : true,
+        type : DataTypes.UUID,
+        defaultValue : Sequelize.UUIDV4
+    },
+    Correo : {
+        type : DataTypes.STRING(200),
+        allowNull : true
+    },
+    Nombre : {
+        type : DataTypes.STRING(150),
+        allowNull : true
+    },
+    Telefono : {
+        type : DataTypes.NUMERIC(9),
+        allowNull : true
+    },
+    Asunto : {
+        type : DataTypes.STRING(100),
+        allowNull : false
+    },
+    Descripcion : {
+        type : DataTypes.STRING(300),
+        allowNull : false
+    },
+    id_usuario : {
+        type : DataTypes.UUID,
+        allowNull : true
+    }
+}, {
+    timestamps : false,
+    freezeTableName : true
+
+})
+const Resena = sequelize.define("resena",{
+    id : {
+        primaryKey : true,
+        type : DataTypes.UUID,
+        defaultValue : Sequelize.UUIDV4
+    },
+    Puntaje : {
+        type : DataTypes.STRING(100),
+        allowNull : true
+    },
+    Comentario : {
+        type : DataTypes.STRING(300),
+        allowNull : true
+    },
+    Video : {
+        type : DataTypes.STRING(200),
+        allowNull : true
+    },
+    Link : {
+        type : DataTypes.STRING(300),
+        allowNull : false
+    },
+    id_usuario : {
+        type : DataTypes.UUID,
+        allowNull : true
+    }
+}, {
+    timestamps : false,
+    freezeTableName : true
+
+})
+
 const Compra = sequelize.define("compra",{
     id : {
         primaryKey : true,
@@ -216,7 +283,22 @@ Producto.hasMany(Detalle_Compra, {
     foreignKey : "id"
 })
 
+//Reporte * <---> 1 Usuario
+Reporte.belongsTo(Usuario, {
+    foreignKey : "id_usuario"
+})
+Usuario.hasMany(Reporte, {
+    foreignKey : "id"
+})
+//Resena * <---> 1 Usuario
+Resena.belongsTo(Usuario, {
+    foreignKey : "id_usuario"
+})
+Usuario.hasMany(Resena, {
+    foreignKey : "id"
+})
+
 
 module.exports = {
-    Usuario,Compra,Categoria,Producto,Detalle_Compra
+    Usuario,Compra,Categoria,Producto,Detalle_Compra,Reporte,Resena
 }
