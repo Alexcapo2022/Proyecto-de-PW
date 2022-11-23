@@ -45,10 +45,14 @@ const Usuario = sequelize.define("usuario",{
         type : DataTypes.NUMERIC(9),
         allowNull : true
     },
-    id_compra : {
-        type : DataTypes.UUID,
+    Departamento : {
+        type : DataTypes.STRING(50),
         allowNull : true
     },
+    Codigo_Postal : {
+        type : DataTypes.STRING(10),
+        allowNull : true
+    }
     
 }, {
     timestamps : false,
