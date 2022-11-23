@@ -125,7 +125,7 @@ const Resena = sequelize.define("resena",{
 
 })
 
-const Compra = sequelize.define("compra",{
+const Orden = sequelize.define("orden",{
     id : {
         primaryKey : true,
         type : DataTypes.UUID,
@@ -135,23 +135,15 @@ const Compra = sequelize.define("compra",{
         type : DataTypes.DATE,
         allowNull : true
     }, 
-    Subtotal : {
+    Monto : {
         type : DataTypes.NUMERIC(10),
         allowNull : true
     },
-    Descuento : {
-        type : DataTypes.NUMERIC(10),
+    Direccion : {
+        type : DataTypes.STRING(200),
         allowNull : true
     },
-    Total : {
-        type : DataTypes.NUMERIC(10),
-        allowNull : true
-    },
-    Igv : {
-        type : DataTypes.NUMERIC(10),
-        allowNull : true
-    },
-    id_detalleCompra : {
+    id_usuario : {
         type : DataTypes.UUID,
         allowNull : true
     }
@@ -160,40 +152,22 @@ const Compra = sequelize.define("compra",{
     freezeTableName : true
 
 })
-const Detalle_Compra = sequelize.define("detalle_compra",{
+const Orden_Producto = sequelize.define("orden_producto",{
     id : {
         primaryKey : true,
         type : DataTypes.UUID,
         defaultValue : Sequelize.UUIDV4
     },
-    Cantidad : {
-        type : DataTypes.NUMERIC(10),
-        allowNull : true
-    },
-    Precio : {
-        type : DataTypes.NUMERIC(10),
-        allowNull : true
-    },
-    Igv : {
-        type : DataTypes.NUMERIC(10),
-        allowNull : true
-    },
-    Descuento : {
-        type : DataTypes.NUMERIC(10),
-        allowNull : true
-    },
-    Total : {
-        type : DataTypes.NUMERIC(10),
+    id_orden : {
+        type : DataTypes.UUID,
         allowNull : true
     },
     id_producto : {
         type : DataTypes.UUID,
         allowNull : true
-    },
-    Nombre_Producto : {
-        type : DataTypes.NUMERIC(10),
-        allowNull : false
     }
+    
+    
 
 }, {
     timestamps : false,
@@ -248,22 +222,66 @@ const Categoria = sequelize.define("categoria",{
     timestamps : false,
     freezeTableName : true
 })
+const PC_Armado_Producto = sequelize.define("pc_armado_producto",{
+    id : {
+        primaryKey : true,
+        type : DataTypes.UUID,
+        defaultValue : Sequelize.UUIDV4
+    },
+    id_pcArmado : {
+        type : DataTypes.UUID,
+        allowNull : true
+    },
+    id_producto : {
+        type : DataTypes.UUID,
+        allowNull : true
+    }
+}, {
+    timestamps : false,
+    freezeTableName : true
+})
+const PC_Armado = sequelize.define("pc_armado",{
+    id : {
+        primaryKey : true,
+        type : DataTypes.UUID,
+        defaultValue : Sequelize.UUIDV4
+    },
+    id_pcArmado : {
+        type : DataTypes.UUID,
+        allowNull : true
+    },
+    Descripcion : {
+        type : DataTypes.STRING(300),
+        allowNull : false
+    },
+}, {
+    timestamps : false,
+    freezeTableName : true
+})
 
 // Relaciones
-// Compra * <----> 1 Usuario
-Compra.belongsTo(Usuario, {
-    foreignKey : "compra_id"
+// Orden * <----> 1 Usuario
+Orden.belongsTo(Usuario, {
+    foreignKey : "id_usuario"
 })
-Usuario.hasMany(Compra, {
+Usuario.hasMany(Orden, {
     foreignKey : "id"
 })
 
 // Relaciones
-// Compra * <----> 1 DetalleCompra
-Compra.belongsTo(Detalle_Compra, {
-    foreignKey : "id_detalleCompra"
+// Orden * <----> 1 ordenproducto
+Orden.belongsTo(Orden_Producto, {
+    foreignKey : "id_orden"
 })
-Detalle_Compra.hasMany(Compra, {
+Orden_Producto.hasMany(Orden, {
+    foreignKey : "id"
+})
+// Relaciones
+// Orden * <----> 1 Producto
+Orden.belongsTo(Producto, {
+    foreignKey : "id_producto"
+})
+Producto.hasMany(Orden, {
     foreignKey : "id"
 })
 
@@ -275,11 +293,21 @@ Categoria.belongsTo(Producto, {
 Producto.hasMany(Categoria, {
     foreignKey : "id"
 })
-//detalleCompra * <---> 1 producto
-Detalle_Compra.belongsTo(Producto, {
+
+// Relaciones
+// PcArmado_producto * <----> 1 pcArmado
+PC_Armado_Producto.belongsTo(PC_Armado, {
+    foreignKey : "id_pcArmado"
+})
+PC_Armado.hasMany(PC_Armado_Producto, {
+    foreignKey : "id"
+})
+// Relaciones
+// PcArmado_producto * <----> 1 producto
+PC_Armado_Producto.belongsTo(Producto, {
     foreignKey : "id_producto"
 })
-Producto.hasMany(Detalle_Compra, {
+Producto.hasMany(PC_Armado_Producto, {
     foreignKey : "id"
 })
 
@@ -300,5 +328,5 @@ Usuario.hasMany(Resena, {
 
 
 module.exports = {
-    Usuario,Compra,Categoria,Producto,Detalle_Compra,Reporte,Resena
+    Usuario,Orden,Categoria,Producto,Orden_Producto,Reporte,Resena,PC_Armado_Producto,PC_Armado
 }
