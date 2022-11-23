@@ -139,12 +139,12 @@ const Orden = sequelize.define("orden",{
         type : DataTypes.NUMERIC(10),
         allowNull : true
     },
-    Direccion : {
-        type : DataTypes.STRING(200),
-        allowNull : true
-    },
     id_usuario : {
         type : DataTypes.UUID,
+        allowNull : true
+    },
+    direccion : {
+        type : DataTypes.STRING(150),
         allowNull : true
     }
 }, {
@@ -216,7 +216,7 @@ const Categoria = sequelize.define("categoria",{
     },
     Nombre : {
         type : DataTypes.STRING(100),
-        allowNull : false
+        allowNull : true
     },
 }, {
     timestamps : false,
@@ -246,8 +246,8 @@ const PC_Armado = sequelize.define("pc_armado",{
         type : DataTypes.UUID,
         defaultValue : Sequelize.UUIDV4
     },
-    id_pcArmado : {
-        type : DataTypes.UUID,
+    Nombre : {
+        type : DataTypes.STRING(100),
         allowNull : true
     },
     Descripcion : {
@@ -270,27 +270,27 @@ Usuario.hasMany(Orden, {
 
 // Relaciones
 // Orden * <----> 1 ordenproducto
-Orden.belongsTo(Orden_Producto, {
+Orden_Producto.belongsTo(Orden, {
     foreignKey : "id_orden"
 })
-Orden_Producto.hasMany(Orden, {
+Orden.hasMany(Orden_Producto, {
     foreignKey : "id"
 })
 // Relaciones
 // Orden * <----> 1 Producto
-Orden.belongsTo(Producto, {
+Orden_Producto.belongsTo(Producto, {
     foreignKey : "id_producto"
 })
-Producto.hasMany(Orden, {
+Producto.hasMany(Orden_Producto, {
     foreignKey : "id"
 })
 
 // Relaciones
 // Producto * <----> 1 Categoria
-Categoria.belongsTo(Producto, {
-    foreignKey : "categoria_id"
+Producto.belongsTo(Categoria, {
+    foreignKey : "id_categoria"
 })
-Producto.hasMany(Categoria, {
+Categoria.hasMany(Producto, {
     foreignKey : "id"
 })
 
