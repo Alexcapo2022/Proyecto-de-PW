@@ -12,7 +12,7 @@ const Login = () => {
                 <Card>
                     <Card.Body>
                         <h2>Login</h2>
-                        <Image/>
+                        <Image className='rounded-circle' display="block"  height="250px" width={300} src='http://localhost:4444/imagenes/usuario.jpg'/>
                         <Form>
                             <Form.Group>
                                 <Form.Label>
