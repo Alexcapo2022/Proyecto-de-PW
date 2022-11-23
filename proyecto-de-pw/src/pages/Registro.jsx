@@ -9,31 +9,31 @@ const Registro = () => {
                     <Card.Body>
                         <h2>Registro</h2>
                         <Form>
-                            <Form.Group>
+                            <Form.Group >
                                 <Form.Label>
                                     First Name
                                 </Form.Label>
-                                <Form.Control type='text'/>
+                                <Form.Control type='text'  />
                             </Form.Group>
-                            <Form.Group>
+                            <Form.Group >
                                 <Form.Label>
                                     Last Name
                                 </Form.Label>
-                                <Form.Control type='text'/>
+                                <Form.Control type='text' />
                             </Form.Group>
-                            <Form.Group>
+                            <Form.Group >
                                 <Form.Label>
                                     Correo
                                 </Form.Label>
-                                <Form.Control type='email'/>
+                                <Form.Control type='email' />
                             </Form.Group>
-                            <Form.Group>
+                            <Form.Group >
                                 <Form.Label>
                                     Password
-                                </Form.Label>
-                                <Form.Control type='password'/>
+                                </Form.Label >
+                                <Form.Control type='password'  />
                             </Form.Group>
-                            <Button className='mt-3' variant='warning' href='/'>Registrarse</Button>
+                            <Button className='mt-3' variant='warning' href='/' >Registrarse</Button>
                         </Form>
                     </Card.Body>
                 </Card>

@@ -1,4 +1,6 @@
 import React from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import '../estilos/armadoPrincipiantes.css';
 
 
@@ -20,12 +22,25 @@ const ArmadoPrincipiantes = (props) =>{
       // 👇️ or set to true
       // setIsActive(true);
     };*/
+  
   const onItemSelected=(emoji)=>{
       setSelected(emoji);
       if(props.callback){
         props.callback(emoji);
       }
    };
+
+   const [listadoPrincipiante,setListadoPrincipainte] = useState ([])
+   const httpObtenerOpciones = async () => {
+    const resp = await fetch("http://localhost:4444/pc_armado")
+    const data = await resp.json()
+    console.log(data)
+    setListadoPrincipainte(data)
+   }
+   useEffect(()=>{
+    httpObtenerOpciones()
+   },[])
+
     return(
         <div>
           <div className="inline" style={{paddingBottom: "50px"}} id="mobile-boptions-nav"><h1 style={{width:"70%"}}>What do you need?</h1>
@@ -92,7 +107,7 @@ const ArmadoPrincipiantes = (props) =>{
         <img src="http://localhost:4444/ArmadoPrincipiantes/other.jpg" alt="" /> 
       <h4>Other</h4>
       <p>An alternative option if you are looking to build your pc</p>
-      <a href="/Build Begginers/INTERFACES/Other.html">More</a>
+      
     </div>
   </div>
   </div>
