@@ -1,14 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap"
 import Accordion from 'react-bootstrap/Accordion'
-import pcgamer from "../imagenes/Componentes/pcgamer.png"
-import intelcore from "../imagenes/Componentes/intelcore.png"
-import nvidia2 from "../imagenes/Componentes/nvidia2.png"
-import DDR4 from "../imagenes/Componentes/DDR4.png"
-import SSD from "../imagenes/Componentes/SSD.png"
-import cool from "../imagenes/Componentes/cool.png"
-import fan from "../imagenes/Componentes/fan.png"
-import motherb from "../imagenes/Componentes/motherb.png"
-import fuente from "../imagenes/Componentes/fuente.png"
 import ListGroup from 'react-bootstrap/ListGroup'
 
 const RankingPc = () =>{
@@ -87,7 +78,7 @@ const RankingPc = () =>{
                         ><Container>
                             <Row>
                                 <Col style={imagen}>
-                                        <img src={pcgamer} alt="" style={mystyle}>
+                                        <img src="http://localhost:4444/Componentes/pcgamer.png" alt="" style={mystyle}>
                                     </img>
                                 </Col>
                                 <Col xs={5} style={nombre}>
@@ -105,7 +96,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={intelcore} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/intelcore.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -121,7 +112,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={nvidia2} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/nvidia2.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -137,7 +128,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={DDR4} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/DDR4.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -153,7 +144,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={SSD} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/SSD.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -169,7 +160,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={cool} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/cool.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -185,7 +176,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={fan} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/fan.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -201,7 +192,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={pcgamer} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/pcgamer.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -217,7 +208,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={fuente} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/fuente.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -233,7 +224,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={motherb} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/motherb.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -253,7 +244,7 @@ const RankingPc = () =>{
                         ><Container>
                                 <Row>
                                     <Col style={imagen}>
-                                        <img src={pcgamer} alt="" style={mystyle}>
+                                        <img src="http://localhost:4444/Componentes/pcgamer.png" alt="" style={mystyle}>
                                         </img>
                                     </Col>
                                     <Col xs={5} style={nombre}>
@@ -271,7 +262,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={intelcore} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/intelcore.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -287,7 +278,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={nvidia2} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/nvidia2.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -303,7 +294,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={DDR4} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/DDR4.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -319,7 +310,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={SSD} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/SSD.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -335,7 +326,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={cool} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/cool.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -351,7 +342,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={fan} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/fan.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -367,7 +358,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={pcgamer} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/pcgamer.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -383,7 +374,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={fuente} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/fuente.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -399,7 +390,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={motherb} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/motherb.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -419,7 +410,7 @@ const RankingPc = () =>{
                         ><Container>
                                 <Row>
                                     <Col style={imagen}>
-                                        <img src={pcgamer} alt="" style={mystyle}>
+                                        <img src="http://localhost:4444/Componentes/pcgamer.png" alt="" style={mystyle}>
                                         </img>
                                     </Col>
                                     <Col xs={5} style={nombre}>
@@ -437,7 +428,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={intelcore} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/intelcore.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -453,7 +444,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={nvidia2} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/nvidia2.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -469,7 +460,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={DDR4} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/DDR4.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -485,7 +476,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={SSD} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/SSD.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -501,7 +492,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={cool} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/cool.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -517,7 +508,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={fan} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/fan.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -533,7 +524,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={pcgamer} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/pcgamer.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -549,7 +540,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={fuente} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/fuente.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -565,7 +556,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={motherb} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/motherb.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -585,7 +576,7 @@ const RankingPc = () =>{
                         ><Container>
                                 <Row>
                                     <Col style={imagen}>
-                                        <img src={pcgamer} alt="" style={mystyle}>
+                                        <img src="http://localhost:4444/Componentes/pcgamer.png" alt="" style={mystyle}>
                                         </img>
                                     </Col>
                                     <Col xs={5} style={nombre}>
@@ -603,7 +594,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={intelcore} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/intelcore.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -619,7 +610,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={nvidia2} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/nvidia2.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -635,7 +626,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={DDR4} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/DDR4.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -651,7 +642,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={SSD} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/SSD.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -667,7 +658,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={cool} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/cool.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -683,7 +674,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={fan} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/fan.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -699,7 +690,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={pcgamer} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/pcgamer.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -715,7 +706,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={fuente} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/fuente.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>
@@ -731,7 +722,7 @@ const RankingPc = () =>{
                                     <Container>
                                         <Row>
                                             <Col style={imagen}>
-                                                <img src={motherb} alt="" style={mystyle}>
+                                                <img src="http://localhost:4444/Componentes/motherb.png" alt="" style={mystyle}>
                                                 </img>
                                             </Col>
                                             <Col xs={5} style={nombre}>

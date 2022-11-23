@@ -1,4 +1,3 @@
-import profile from '../imagenes/icons/logousuario.png'
 import '../estilos/ProfileInfo.css'
 const ProfileInfo = () =>{
     
@@ -6,7 +5,7 @@ const ProfileInfo = () =>{
         <div className="wrapper bg-white mt-sm-5">
         <h4 className="pb-4 border-bottom">Editar Perfil</h4>
         <div id="logo" className="d-flex align-items-start py-3 border-bottom">
-          <img src={profile} className="img" alt="" />
+          <img src="http://localhost:4444/icons/logousuario.png" className="img" alt="" />
         </div>
         <p >Foto de perfil</p>
         <div>

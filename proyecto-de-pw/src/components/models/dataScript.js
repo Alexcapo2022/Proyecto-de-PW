@@ -1,123 +1,123 @@
 export let possibleCheckoutItems=[];
 
 
-
+/*
 let processorNum=0;
 let buyNum=0;
 let buySelection=0;
 let componentsPrice=0;
-
+*/
 
 export const  graphicItems=[{
     "name":"NVIDIA GeForce GTx base",
     "price":200,
-    "img":"images/graphic.png"
+    "img":"http://localhost:4444/imagenes/graphic.png"
 },{
     "name":"NVIDIA GeForce GTx max",
     "price":200,
-    "img":"images/graphic.png"
+    "img":"http://localhost:4444/imagenes/graphic.png"
 },{
     "name":"NVIDIA GeForce Metal",
     "price":200,
-    "img":"images/graphic.png"
+    "img":"http://localhost:4444/imagenes/graphic.png"
 },{
     "name":"NVIDIA GeForce Omega",
     "price":400,
-    "img":"images/graphic.png"
+    "img":"http://localhost:4444/imagenes/graphic.png"
 }];
 export const processorItems=[{
     "name":"Intel I3",
     "price":200,
-    "img":"images/processor.png"
+    "img":"http://localhost:4444/imagenes/processor.png"
 },{
     "name":"Intel I5",
     "price":200,
-    "img":"images/processor.png"
+    "img":"http://localhost:4444/imagenes/processor.png"
 },{
     "name":"Intel I7",
     "price":200,
-    "img":"images/processor.png"
+    "img":"http://localhost:4444/imagenes/processor.png"
 },{
     "name":"Intel I9",
     "price":400,
-    "img":"images/processor.png"
+    "img":"http://localhost:4444/imagenes/processor.png"
 }];
 export const memoryItems=[{
     "name":"RAM 4gb",
     "price":200,
-    "img":"images/memory.png"
+    "img":"http://localhost:4444/imagenes/memory.png"
 },{
     "name":"RAM 8gb",
     "price":200,
-    "img":"images/memory.png"
+    "img":"http://localhost:4444/imagenes/memory.png"
 },{
     "name":"RAM 16gb",
     "price":200,
-    "img":"images/memory.png"
+    "img":"http://localhost:4444/imagenes/memory.png"
 },{
     "name":"RAM 32gb",
     "price":400,
-    "img":"images/memory.png"
+    "img":"http://localhost:4444/imagenes/memory.png"
 }];
 export const storageItems=[{
     "name":"Toshiba 500GB",
     "price":200,
-    "img":"images/storage.png"
+    "img":"http://localhost:4444/imagenes/storage.png"
 },{
     "name":"Toshiba 1TB",
     "price":200,
-    "img":"images/storage.png"
+    "img":"http://localhost:4444/imagenes/storage.png"
 },{
     "name":"Toshiba 2TB",
     "price":200,
-    "img":"images/storage.png"
+    "img":"http://localhost:4444/imagenes/storage.png"
 },{
     "name":"Toshiba 3TB",
     "price":400,
-    "img":"images/storage.png"
+    "img":"http://localhost:4444/imagenes/storage.png"
 }];
 export const coolerItems=[{
     "name":"Cooler 10",
     "price":200,
-    "img":"images/cooler.png"
+    "img":"http://localhost:4444/imagenes/cooler.png"
 },{
     "name":"Cooler 20",
     "price":200,
-    "img":"images/cooler.png"
+    "img":"http://localhost:4444/imagenes/cooler.png"
 },{
     "name":"Cooler 30",
     "price":200,
-    "img":"images/cooler.png"
+    "img":"http://localhost:4444/imagenes/cooler.png"
 },{
     "name":"Cooler 40",
     "price":400,
-    "img":"images/cooler.png"
+    "img":"http://localhost:4444/imagenes/cooler.png"
 }];
 export const windowsItems=[{
     "name":"Windows 8 32bit AMD",
     "price":200,
-    "img":"images/windows.png"
+    "img":"http://localhost:4444/imagenes/windows.png"
 },{
     "name":"Windows 8 64bit AMD",
     "price":200,
-    "img":"images/windows.png"
+    "img":"http://localhost:4444/imagenes/windows.png"
 },{
     "name":"Windows 8 64bit Intel",
     "price":200,
-    "img":"images/windows.png"
+    "img":"http://localhost:4444/imagenes/windows.png"
 },{
     "name":"Windows 8 64bit Intel",
     "price":400,
-    "img":"images/windows.png"
+    "img":"http://localhost:4444/imagenes/windows.png"
 }];
 export const powersupplyItems=[{
     "name":"PowerSupply Base",
     "price":200,
-    "img":"images/power.png"
+    "img":"http://localhost:4444/imagenes/power.png"
 },{
     "name":"PowerSupply Max",
     "price":200,
-    "img":"images/power.png"
+    "img":"http://localhost:4444/imagenes/power.png"
 }];
 
 export const gamingComponents = [
@@ -142,9 +142,3 @@ export const otherComponents = [
 export const allItems=[
     graphicItems,processorItems,memoryItems,storageItems,coolerItems,windowsItems,powersupplyItems
 ]
-export default {
-    allItems, graphicItems,processorItems, powersupplyItems, coolerItems,
-    windowsItems,storageItems, memoryItems,gamingComponents, designComponents,
-    codingComponentes, officeComponents, renderingComponents, otherComponents,
-    possibleCheckoutItems
-}
