@@ -2,6 +2,7 @@ const express = require("express")
 const bodyParser = require("body-parser")
 const cors = require("cors")
 
+
 const { Usuario,Orden,Categoria,Producto,Orden_Producto,Reporte,Resena,PC_Armado_Producto,PC_Armado } = require("./dao")
 
 
@@ -141,6 +142,45 @@ app.get("/pc_ArmadoProducto",async (req,resp) => {
 //app.post("/formulario"),async (req,resp) =>{}
     
 //POST PARA REGISTRO USUARIO
+app.post("/registro", async (req, res) => {
+    const email = req.body.email
+    const usuarioExistente = await Usuario.findAll({
+        where : {
+            Correo: email
+        }
+    })
+    console.log(usuarioExistente.length)
+    if (usuarioExistente.length == 0){
+        try {
+            await Usuario.create({
+            
+                Nombre: req.body.name,
+                Apellido: req.body.lastName,
+                Correo: email,
+                Contraseña: req.body.password,
+                Pais: req.body.pais,
+                Direccion: req.body.address,
+                Departamento: req.body.apartment,
+                Codigo_Postal: req.body.zip,
+                
+            });
+            res.send({
+                verify: true
+            })
+            return      
+        } catch (error) {
+            res.send({
+                error : `ERROR. ${error}`
+            })
+            return
+        }  
+    }else{res.send({
+        verify: false
+    })}
+    console.log(res.json().verify)
+     
+})
+/*
 app.post("/registro",async(req,resp) => {
     const dataRequest = req.body
     console.log(dataRequest.nombre)
@@ -168,7 +208,7 @@ app.post("/registro",async(req,resp) => {
         error : ""
     })
 
-})
+})*/
 //PARA EDITAR USUARIO
 app.put("/registro/:id",async(req,resp)=>{
     
