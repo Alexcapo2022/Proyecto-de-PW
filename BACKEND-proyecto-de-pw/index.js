@@ -103,7 +103,7 @@ app.get("/PC_armado",async(req,resp)=>{
    
 
 })
-
+/*
 // Mostrar Reporte
 app.get("/reporte",async (req,resp) => {
     const listaReporte = await Reporte.findAll()
@@ -116,6 +116,7 @@ app.get("/resena",async (req,resp) => {
 
     resp.send(listaResena)
 })
+*/
 // Mostrar Orden
 app.get("/orden",async (req,resp) => {
     const listaOrden = await Orden.findAll()
@@ -218,12 +219,12 @@ app.delete("/registro/:id",async(req,resp)=>{
 })
 
 //POST PARA CREAR REPORTE
+//POST PARA CREAR REPORTE
 app.post("/reporte",async(req,resp)=>{
     const dataRequest = req.body
     
     const correo = dataRequest.correo
-    console.log(dataRequest.nombre)
-    const nombreID = dataRequest.nombre
+    const Nombre = dataRequest.nombre
     const Telefono = dataRequest.telefono
     const Asunto = dataRequest.asunto
     const Descripcion = dataRequest.descripcion
@@ -232,10 +233,11 @@ app.post("/reporte",async(req,resp)=>{
     try {
         await Reporte.create({
             Correo :correo,
-            Nombre : nombreID,
+            Nombre : Nombre,
             Telefono : Telefono,
             Asunto : Asunto,
             Descripcion : Descripcion,
+            id_usuario : "2babb094-7f68-45d1-86b3-ad685a6a1b69",
             
         })
         
@@ -265,6 +267,7 @@ app.post("/resena",async(req,resp)=>{
             Comentario : Comentario,
             Video : Video,
             Link : Link,
+            id_usuario : "2babb094-7f68-45d1-86b3-ad685a6a1b69",
             
             
         })
@@ -278,6 +281,45 @@ app.post("/resena",async(req,resp)=>{
     resp.send({
         error : ""
     })
+})
+// Muestra los reportes
+app.get("/reporte",async(req,resp)=>{
+    const Correo = req.query.correo
+    if(Correo!=undefined){
+        const ListadoReporte = await Reporte.findAll({
+            where:{
+                Correo:Correo
+            }
+        })
+        resp.send(ListadoReporte)
+    }else{
+        const ListadoReporte = await Reporte.findAll({
+
+        })
+        resp.send(ListadoReporte)
+    }
+})
+//Muestra las reseñas filtradas por Persona
+app.get("/resena",async(req,resp)=>{
+    const Usuarioid=req.query.usuario
+    if(Usuarioid!=undefined){
+        const listadoResena= await Resena.findAll({
+            where:{
+                id_usuario:Usuarioid
+            }
+        })
+        resp.send(listadoResena)
+    }else{
+        const listadoResena= await Resena.findAll({
+            include: {
+                model:Usuario,
+                where : {
+                    Nombre:"Roberto",
+                }
+            }
+        })
+        resp.send(listadoResena)
+    }
 })
 
 app.listen(PUERTO, () => { 
