@@ -42,6 +42,68 @@ app.get("/pc_armado",async (req,resp) => {
 
     resp.send(listaPc_armado)
 })
+
+//MOstrar PC_armado_filtrado
+app.get("/PC_armado",async(req,resp)=>{
+    const tipodeArmado = req.query.tipo
+    if(tipodeArmado=="coding" || tipodeArmado==undefined){
+        const listadoPcArmado = await PC_Armado_Producto.findAll({
+            where:{
+                PC_Armado_id: "177cc526-e047-4e45-83c8-9e026c7e3f92",
+            },
+            include: Producto
+       })
+       resp.send(listadoPcArmado)
+    }
+    if(tipodeArmado=="gaming"){
+        const listadoPcArmado = await PC_Armado_Producto.findAll({
+            where:{
+                PC_Armado_id: "306e760f-0359-4e3c-b373-f8ec45ee171d",
+            },
+            include: Producto
+       })
+       resp.send(listadoPcArmado)
+    }
+    if(tipodeArmado=="office"){
+        const listadoPcArmado = await PC_Armado_Producto.findAll({
+            where:{
+                PC_Armado_id: "7a88587c-5a08-4645-9bc2-5a8f9688b0db",
+            },
+            include: Producto
+       })
+       resp.send(listadoPcArmado)
+    }
+    if(tipodeArmado=="other"){
+        const listadoPcArmado = await PC_Armado_Producto.findAll({
+            where:{
+                PC_Armado_id: "5f1a374a-355b-4d4f-b28a-1254715bdfc6",
+            },
+            include: Producto
+       })
+       resp.send(listadoPcArmado)
+    }
+    if(tipodeArmado=="design"){
+        const listadoPcArmado = await PC_Armado_Producto.findAll({
+            where:{
+                PC_Armado_id: "c9199244-6b21-4160-86f7-cae5d20cb0bc",
+            },
+            include: Producto
+       })
+       resp.send(listadoPcArmado)
+    }
+    if(tipodeArmado=="rendering"){
+        const listadoPcArmado = await PC_Armado_Producto.findAll({
+            where:{
+                PC_Armado_id: "354f6c54-6321-4fb7-8ffc-3fe6adf62fd5",
+            },
+            include: Producto
+       })
+       resp.send(listadoPcArmado)
+    }
+   
+
+})
+
 // Mostrar Reporte
 app.get("/reporte",async (req,resp) => {
     const listaReporte = await Reporte.findAll()
