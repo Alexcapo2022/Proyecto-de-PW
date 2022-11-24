@@ -212,6 +212,30 @@ app.put("/registro/:id",async(req,resp)=>{
     })
 
 })
+//Para realizar el LOGIN
+//Login
+app.post("/login", async (req, res) => {
+    const email = req.body.email
+    const password = req.body.password
+    const UsuarioRegistrado = await Usuario.findAll({
+        where : {
+            Correo: email,
+            Contraseña: password
+        }
+    })
+    if (UsuarioRegistrado.length == 0){
+        //En caso no existe usuario
+        res.send({
+            verify: false
+        })
+    } else{
+        res.send({
+            verify: true
+        })
+    }
+    
+})
+
 //PARA ELIMINAR USUARIO
 app.delete("/registro/:id",async(req,resp)=>{
     const Id= req.params.id
