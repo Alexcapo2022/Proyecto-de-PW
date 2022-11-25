@@ -1,13 +1,4 @@
 import '../estilos/ranking.css'
-import G432 from '../imagenes/periphereals/audifono-logitech-g432.jpg'
-import G733 from '../imagenes/periphereals/G733-WHITE.jpg'
-import CLOUD from '../imagenes/periphereals/HEADSET-HYPERX-CLOUD-II.jpg'
-import HYPEREX from '../imagenes/periphereals/MICROFONO-HYPERX-QUADCAST.jpg'
-import G502 from '../imagenes/periphereals/MOUSE-LOGITECH-G502HERO.jpg'
-import BALITIK from '../imagenes/periphereals/MOUSE_BALILIK_V2.jpg'
-import RAZER from '../imagenes/periphereals/Razer_BlackWidows_V3.jpg'
-import APEX from '../imagenes/periphereals/SteelSeries Apex Pro.jpg'
-import G213 from '../imagenes/periphereals/Teclado-Logitech-ProdigyG213.png'
 const RankingPerifericos = () =>{
     return(
         <div>
@@ -33,7 +24,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src={G432}
+            src="http://localhost:4444/periphereals/g432.jpg"
             className="card-img-top"
             alt="..."
           />
@@ -50,7 +41,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src={G733}
+            src="http://localhost:4444/periphereals/G733.jpg"
             className="card-img-top"
             alt="..."
           />
@@ -69,7 +60,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src={CLOUD}
+            src="http://localhost:4444/periphereals/CLOUD-II.jpg"
             className="card-img-top"
             alt="..."
           />
@@ -90,7 +81,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src={HYPEREX}
+            src="http://localhost:4444/periphereals/QUADCAST.jpg"
             className="card-img-top"
             alt="..."
           />
@@ -109,7 +100,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src={G502}
+            src="http://localhost:4444/periphereals/G502HERO.jpg"
             className="card-img-top"
             alt="..."
           />
@@ -128,7 +119,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src={BALITIK}
+            src="http://localhost:4444/periphereals/BASILISK.jpg"
             className="card-img-top"
             alt="..."
           />
@@ -149,7 +140,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src={RAZER}
+            src="http://localhost:4444/periphereals/BlackWidows.jpg"
             className="card-img-top"
             alt="..."
           />
@@ -168,7 +159,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src={APEX}
+            src="http://localhost:4444/periphereals/Apex.jpg"
             className="card-img-top"
             alt="..."
           />
@@ -187,7 +178,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src={G213}
+            src="http://localhost:4444/periphereals/Teclado-Logitech-ProdigyG213.png"
             className="card-img-top"
             alt="..."
           />

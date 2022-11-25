@@ -22,7 +22,7 @@ function NavBar() {
             <Nav.Link href="/PaginaPrincipal">Home</Nav.Link>
             <Nav.Link href="/About">About</Nav.Link>
             <Nav.Link href="/Support">Support</Nav.Link>
-            <Nav.Link href="Reviews">Reviews</Nav.Link>  
+            <Nav.Link href="/Reviews">Reviews</Nav.Link>  
             <NavDropdown title="Ranking" id="collasible-nav-dropdown">
               <NavDropdown.Item href="/RankingPC">Ranking de PCs</NavDropdown.Item>
               <NavDropdown.Item href="/RankingPerifericos">

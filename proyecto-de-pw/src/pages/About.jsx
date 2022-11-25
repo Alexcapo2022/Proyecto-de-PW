@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Image from "react-bootstrap/Image";
 import Nav from "react-bootstrap/Nav"
 import "../estilos/About.css";
-import imagen15 from "../imagenes/HR/coding.png";
+
 
 
 const About =() =>{
@@ -23,7 +23,7 @@ const About =() =>{
                     <p id="letra"><i>OWN!</i></p>
                 </Row> 
                 <Row className="flexi">
-                    <Image src={imagen15} id="imagen15"/>
+                    <Image src="http://localhost:4444/HR/coding.png" id="imagen15"/>
                     <Row className="alinearl">
                         <p id="letra3"><i>OUR MISSION IS TO BUILD GAMING PCS AT THE</i></p>
                         <p id="letra3"><i>BEST PRICE WITHOUT CUTTING CORNERS.</i></p>

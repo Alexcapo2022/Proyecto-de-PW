@@ -1,8 +1,8 @@
 import '../estilos/estilosReq.css'
 
 
-import tecno from "../imagenes/HR/tecnonauta.jpg";
-import varo from "../imagenes/HR/varo.jpg"
+
+
 
 function Req21() {
   return <div>
@@ -34,7 +34,7 @@ function Req21() {
           </div>
           <div className='pt-3 bg-white'>
             <div className='d-inline p-2'>
-              <img src={tecno} className='rounded-circle' height="40px" width={40} alt="" />
+              <img src="http://localhost:4444/HR/tecnonauta.jpg" className='rounded-circle' height="40px" width={40} alt="" />
             </div>
             <div className='d-inline px-2 fs-5 fw-bold descrip'>
               TECNONAUTA
@@ -67,7 +67,7 @@ function Req21() {
           </div>
           <div className='pt-3 bg-white'>
             <div className='d-inline p-2'>
-              <img src={varo} className='rounded-circle' height="40px" width={40} alt="" />
+              <img src="http://localhost:4444/HR/varo.jpg" className='rounded-circle' height="40px" width={40} alt="" />
             </div>
             <div className='d-inline px-2 fs-5 fw-bold descrip'>
               RINCÓN DE VARO
