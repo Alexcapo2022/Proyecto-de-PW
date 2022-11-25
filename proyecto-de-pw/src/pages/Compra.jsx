@@ -45,7 +45,7 @@ const Compra = ()=>{
     if(possibleCheckoutItems.length>0){
     return <div id="thankCard" style={{display:done===true?"flex":"none"}}>
       <h1>Thanks for your order!</h1>
-      <img src="images/gracias.gif" alt=""/>
+      <img src="http://localhost:4444/imagenes/gracias.gif" alt=""/>
       <div className="inline">
         <h2>Rate us</h2>
         <button onClick={()=>{setStar(1)}}><img src={star>=1?"/icons/star-filled.png":"/icons/star-unfilled.png"} id="thankCardstar" alt=""/></button>
