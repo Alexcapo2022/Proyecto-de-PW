@@ -10,7 +10,6 @@ import {faUser} from "@fortawesome/free-solid-svg-icons"
 import {faCartShopping} from "@fortawesome/free-solid-svg-icons"
 
 
-
 function NavBar() {
   return (
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
@@ -52,5 +51,6 @@ function NavBar() {
     </Navbar>
   );
 }
+
 
 export default NavBar;
