@@ -397,7 +397,6 @@ app.post("/reporte",async(req,resp)=>{
 app.post("/resena",async(req,resp)=>{
     const dataRequest = req.body
     const Puntaje = dataRequest.puntaje
-    console.log(dataRequest.comentario)
     const Comentario = dataRequest.comentario
     const Video = dataRequest.video
     const Link = dataRequest.link
@@ -442,6 +441,29 @@ app.get("/reporte",async(req,resp)=>{
     }
 })
 //Muestra las reseñas filtradas por Persona
+app.get("/listadoUsuario",async(req,resp)=>{
+    const Usuarioid=req.query.usuario
+    if(Usuarioid!=undefined){
+        
+        const listadoUsuario= await Usuario.findAll({
+            where:{
+                id:Usuarioid
+            }
+        })
+        resp.send(listadoUsuario)
+    }else{
+        const listadoResena= await Resena.findAll({
+            include: {
+                model:Usuario,
+                where : {
+                    Nombre:"Roberto",
+                }
+            }
+        })
+        resp.send(listadoResena)
+    }
+})
+
 app.get("/resena",async(req,resp)=>{
     const Usuarioid=req.query.usuario
     if(Usuarioid!=undefined){
@@ -449,7 +471,15 @@ app.get("/resena",async(req,resp)=>{
             where:{
                 id_usuario:Usuarioid
             }
+        })  
+        const listadoUsuario= await Usuario.findAll({
+            where:{
+                id:Usuarioid
+            }
         })
+        
+        listadoResena[0]["Nombre"]=listadoUsuario["Nombre"]
+        
         resp.send(listadoResena)
     }else{
         const listadoResena= await Resena.findAll({

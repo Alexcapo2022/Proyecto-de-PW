@@ -5,7 +5,29 @@ import { useState } from "react";
 
 const Compra = ()=>{
 
-  const [Department, setDepartment] = useState("");
+  const [puntaje, setPuntaje] = useState("");
+  const [comentario, setComentario] = useState("");
+  const [video, setVideo] = useState("");
+  const [link, setLink] = useState("");
+
+  const httpGuardarReseña = async (user) => {
+        
+    const resp = await fetch("http://localhost:4444/resena", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+    });
+    const data = await resp.json();
+    if (data.verify) {
+        // Se registró satisfactoriamente.
+        alert("Se envio correctamente");  
+    } 
+}
+
+
+
 
     const [star,setStar]=useState(0);
     const [done,setDone]=useState(false);
@@ -62,26 +84,29 @@ const Compra = ()=>{
                 
         <div className="col-md-6 pt-md-0 pt-3">
               <label htmlFor="depart">Puntaje</label>
-              <input type="text" className="bg-lighdt form-control" placeholder=""   onChange={(e) => setDepartment(e.target.value)} />
+              <input type="text" className="bg-lighdt form-control" placeholder=""   value={puntaje} onChange={(e) => setPuntaje(e.target.value)} />
         </div>
         <div className="col-md-6 pt-md-0 pt-3">
               <label htmlFor="depart">comentario</label>
-              <input type="text" className="bg-lighdt form-control" placeholder=""  onChange={(e) => setDepartment(e.target.value)} />
+              <input type="text" className="bg-lighdt form-control" placeholder=""  value={comentario} onChange={(e) => setComentario(e.target.value)} />
         </div>
         <div className="col-md-6 pt-md-0 pt-3">
               <label htmlFor="depart">Video</label>
-              <input type="text" className="bg-lighdt form-control" placeholder=""   onChange={(e) => setDepartment(e.target.value)} />
+              <input type="text" className="bg-lighdt form-control" placeholder=""   value={video} onChange={(e) => setVideo(e.target.value)} />
         </div>
         <div className="col-md-6 pt-md-0 pt-3">
               <label htmlFor="depart">Link</label>
-              <input type="text" className="bg-lighdt form-control" placeholder=""  onChange={(e) => setDepartment(e.target.value)} />
+              <input type="text" className="bg-lighdt form-control" placeholder=""  value={link} onChange={(e) => setLink(e.target.value)} />
         </div>
         
    
       </div>
-      <a href="/PaginaPrincipal"><button id="thankCardbutton" onClick={()=>{deleteItems()}}>Submit</button></a>
+      <a href="/PaginaPrincipal"><button id="thankCardbutton" onClick={()=>{deleteItems()}} >Submit</button></a>
     </div>
     }
+  }
+  const todos = () =>{
+    
   }
   const saveHistory = () =>{
     

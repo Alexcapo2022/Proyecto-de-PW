@@ -1,4 +1,5 @@
 import React from "react";
+
 import { useEffect } from "react";
 import { useState } from "react";
 import '../estilos/armadoPrincipiantes.css';
@@ -6,6 +7,8 @@ import '../estilos/armadoPrincipiantes.css';
 
 
 const ArmadoPrincipiantes = (props) =>{
+
+
   let currentSelection="";
   //let selection=0;
   const [selected, setSelected] = React.useState(0);
@@ -31,33 +34,18 @@ const ArmadoPrincipiantes = (props) =>{
    };
 
    const [listadoPrincipiante,setListadoPrincipainte] = useState ([])
-   const httpObtenerOpciones = async (tipo) => {
-    const resp = await fetch(`http://localhost:9999/PC_armado?tipo=${tipo}`)
+   const httpObtenerOpciones = async () => {
+    const resp = await fetch(`http://localhost:4444/PC_armado`)
+    
     const data = await resp.json()
-    console.log(data)
+    
     setListadoPrincipainte(data)
+    
    }
-   useEffect(()=>{
-    console.log(`probando${selected}`)
-    if(selected===1){
-        httpObtenerOpciones("gaming")
-    }
-    if(selected===2){
-        httpObtenerOpciones("design")
-    }
-    if(selected===3){
-        httpObtenerOpciones("coding")
-    }
-    if(selected===4){
-        httpObtenerOpciones("rendering")
-    }
-    if(selected===5){
-        httpObtenerOpciones("office")
-    }
-    if(selected===6){
-        httpObtenerOpciones("other")
-    }
-},[selected])
+   
+   useEffect (()=>{
+    httpObtenerOpciones()
+},[])
 
     return(
         <div>
