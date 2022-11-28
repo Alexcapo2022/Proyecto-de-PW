@@ -84,29 +84,46 @@ const Compra = ()=>{
                 
         <div className="col-md-6 pt-md-0 pt-3">
               <label htmlFor="depart">Puntaje</label>
-              <input type="text" className="bg-lighdt form-control" placeholder=""   value={puntaje} onChange={(e) => setPuntaje(e.target.value)} />
+              <input type="text" className="bg-lighdt form-control" placeholder=""   value={puntaje} onChange={(e) => setPuntaje(e.target.value)} required />
         </div>
         <div className="col-md-6 pt-md-0 pt-3">
               <label htmlFor="depart">comentario</label>
-              <input type="text" className="bg-lighdt form-control" placeholder=""  value={comentario} onChange={(e) => setComentario(e.target.value)} />
+              <input type="text" className="bg-lighdt form-control" placeholder=""  value={comentario} onChange={(e) => setComentario(e.target.value)} required/>
         </div>
         <div className="col-md-6 pt-md-0 pt-3">
               <label htmlFor="depart">Video</label>
-              <input type="text" className="bg-lighdt form-control" placeholder=""   value={video} onChange={(e) => setVideo(e.target.value)} />
+              <input type="text" className="bg-lighdt form-control" placeholder=""   value={video} onChange={(e) => setVideo(e.target.value)} required />
         </div>
         <div className="col-md-6 pt-md-0 pt-3">
               <label htmlFor="depart">Link</label>
-              <input type="text" className="bg-lighdt form-control" placeholder=""  value={link} onChange={(e) => setLink(e.target.value)} />
+              <input type="text" className="bg-lighdt form-control" placeholder=""  value={link} onChange={(e) => setLink(e.target.value)} required />
         </div>
         
    
       </div>
-<<<<<<< HEAD
-      <a href="/PaginaPrincipal"><button id="thankCardbutton" onClick={()=>{deleteItems()}} >Submit</button></a>
-=======
-      <a href="/PaginaPrincipal"><button id="thankCardbutton" onClick={()=>{deleteItems()}}>Submit</button></a>
-      <a href="/PaginaPrincipal"><button id="thankCardbutton" onClick={()=>{deleteItems()}}>Back Menu</button></a>
->>>>>>> 379c7c7b433f03c39cc8b7ecbfaccdfbbf44c277
+
+      <a href="/PaginaPrincipal"><button id="thankCardbutton" onClick={()=>{deleteItems()}}>Back to menu</button></a>
+      <a href="#"><button id="thankCardbutton" onClick={() => {
+                            if (puntaje !== "" && comentario !== "") {
+                            const user = {};
+                            user.puntaje = puntaje;
+                            user.comentario = comentario;
+                            user.video = video;
+                            user.link = link;
+                            
+
+                            httpGuardarReseña(user);
+
+                            setComentario("");
+                            setPuntaje("");
+                            setVideo("");
+                            setLink("");
+
+                        } else {
+                            alert("Completa los formularios correctamente!");
+                        }
+                        }}>Submit</button></a>
+
     </div>
     }
   }
