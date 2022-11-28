@@ -187,7 +187,7 @@ app.post("/login", async (req, res) => {
     const usuarioRegistrado = await Usuario.findAll({
         where : {
             Correo: email,
-            Contrasena: password
+            Contraseña: password
         }
     })
     if (usuarioRegistrado.length == 0){
