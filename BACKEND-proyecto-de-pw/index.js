@@ -231,12 +231,19 @@ app.post("/registro",async(req,resp) => {
     })
 
 })*/
+//devolver correo
+app.get("/vercorreo", async(req, resp)=>{
+    const correo = req.query.correo;
+    const listadoCuentas = await Usuario.findAll({
+        where : {
+            Correo: correo
+        }
+    })
+    resp.send(listadoCuentas)
+})
 //PARA EDITAR USUARIO
-app.put("/registro/:id",async(req,resp)=>{
-    
-    const dataRequest = req.body
-    console.log(req.params)
-    console.log(req.body)
+app.put("/registro/:correo",async(req,resp)=>{
+    /*const dataRequest = req.body
     const Id= req.params.id
     const nombreID = dataRequest.nombre
     const apellidoID = dataRequest.apellido
@@ -248,32 +255,81 @@ app.put("/registro/:id",async(req,resp)=>{
     const Departamento = dataRequest.departamento
     const Codigo_Postal = dataRequest.cp
 
-    try {
-        await Usuario.update({
-            Nombre : nombreID,
-            Apellido : apellidoID,
-            Correo : correo,
-            Contraseña : Contraseña,
-            Pais : Pais,
-            Direccion : Direccion,
-            Celular : Celular,
-            Departamento : Departamento,
-            Codigo_Postal : Codigo_Postal,
-
-        },{where: {id : Id}})
-
-        
-    } catch (error) {
-        resp.send({
-            error : `ERROR. ${error}`
-        })
-        return
-    }
-    resp.send({
-        error : ""
+    const correoExistente = await Usuario.findAll({
+        where : {
+            Correo : correo
+        }
     })
+    console.log(correoExistente.length)
+    if (correoExistente.length == 0){
+        try {
+            await Usuario.update({
+                Nombre : nombreID,
+                Apellido : apellidoID,
+                Correo : correo,
+                Contraseña : Contraseña,
+                Pais : Pais,
+                Direccion : Direccion,
+                Celular : Celular,
+                Departamento : Departamento,
+                Codigo_Postal : Codigo_Postal,
+    
+            },{where: {Correo : correo}})
+    
+            
+        } catch (error) {
+            resp.send({
+                error : `ERROR. ${error}`
+            })
+            return
+        }
+        resp.send({
+            error : ""
+        })}
+    console.log(resp.json().verify)
+})*/   
+const dataRequest = req.body
+console.log(req.params)
+console.log(req.body)
+const Id= req.params.id
+const nombreID = dataRequest.nombre
+const apellidoID = dataRequest.apellido
+const correo = dataRequest.correo
+const Contraseña = dataRequest.contra
+const Pais = dataRequest.pais
+const Direccion = dataRequest.direc
+const Celular = dataRequest.celular
+const Departamento = dataRequest.departamento
+const Codigo_Postal = dataRequest.cp
+
+try {
+    await Usuario.update({
+        Nombre : nombreID,
+        Apellido : apellidoID,
+        Correo : correo,
+        Contraseña : Contraseña,
+        Pais : Pais,
+        Direccion : Direccion,
+        Celular : Celular,
+        Departamento : Departamento,
+        Codigo_Postal : Codigo_Postal,
+
+    },{where: {Correo : correo}})
+
+    
+} catch (error) {
+    resp.send({
+        error : `ERROR. ${error}`
+    })
+    return
+}
+resp.send({
+    error : ""
+})
 
 })
+
+
 //Para realizar el LOGIN
 //Login
 app.post("/login", async (req, res) => {
