@@ -32,7 +32,7 @@ const Login = () => {
         <Row className='mt-4'>
             <Col></Col>
             <Col>
-                <Card>
+                <Card className= 'cuadro'>
                     <Card.Body>
                         <h2>Login</h2>
                         <Image className='rounded-circle' display="block"  height="250px" width={300} src='http://localhost:4444/imagenes/usuario.jpg'/>

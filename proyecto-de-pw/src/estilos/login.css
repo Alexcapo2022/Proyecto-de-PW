@@ -1,7 +1,21 @@
+
 body.login{
     background: url("http://localhost:4444/icons/fondo2.gif") no-repeat center top;
     background-size: cover;
     height: 100vh;
     margin: 0;
-    padding: 0;
+    padding-top: 10px;
+    ;
+}
+
+.cuadro{
+    width: 420px;
+    height: 700px;
+    color: black;
+    top: 50%;
+    left: 50%;
+    position:absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 40px 40px;
 }
