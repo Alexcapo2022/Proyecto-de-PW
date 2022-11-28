@@ -3,6 +3,7 @@ import "bootstrap"
 import '../estilos/login.css'
 
 const Login = () => {
+    /*
     const httpLogin = async (user) => {
         const resp = await fetch("http://localhost:4444/login", {
             method: "POST",
@@ -23,7 +24,7 @@ const Login = () => {
             // No existe el usuario. Error.
             setErrorLogin(true)
         }
-    }
+    }*/
     
     return(
     <body className='login'>
