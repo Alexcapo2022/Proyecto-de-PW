@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 
+
+
 const Compra = ()=>{
     const [star,setStar]=useState(0);
     const [done,setDone]=useState(false);
@@ -53,6 +55,26 @@ const Compra = ()=>{
         <button onClick={()=>{setStar(3)}}><img src={star>=3?"/icons/star-filled.png":"/icons/star-unfilled.png"}  id="thankCardstar" alt=""/></button>
         <button onClick={()=>{setStar(4)}}><img src={star>=4?"/icons/star-filled.png":"/icons/star-unfilled.png"}  id="thankCardstar" alt=""/></button>
         <button onClick={()=>{setStar(5)}}><img src={star>=5?"/icons/star-filled.png":"/icons/star-unfilled.png"}  id="thankCardstar" alt="" /></button>
+
+                
+        <div className="col-md-6 pt-md-0 pt-3">
+              <label htmlFor="depart">Puntaje</label>
+              <input type="text" className="bg-lighdt form-control" placeholder=""   onChange={(e) => setDepartment(e.target.value)} />
+        </div>
+        <div className="col-md-6 pt-md-0 pt-3">
+              <label htmlFor="depart">comentario</label>
+              <input type="text" className="bg-lighdt form-control" placeholder=""  onChange={(e) => setDepartment(e.target.value)} />
+        </div>
+        <div className="col-md-6 pt-md-0 pt-3">
+              <label htmlFor="depart">Video</label>
+              <input type="text" className="bg-lighdt form-control" placeholder=""   onChange={(e) => setDepartment(e.target.value)} />
+        </div>
+        <div className="col-md-6 pt-md-0 pt-3">
+              <label htmlFor="depart">Link</label>
+              <input type="text" className="bg-lighdt form-control" placeholder=""  onChange={(e) => setDepartment(e.target.value)} />
+        </div>
+        
+   
       </div>
       <a href="/PaginaPrincipal"><button id="thankCardbutton" onClick={()=>{deleteItems()}}>Submit</button></a>
     </div>

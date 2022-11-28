@@ -263,18 +263,20 @@ b{
 #thankCard{
     color:black;
     background-color: white;
-    position: fixed;
+    position:absolute;
     padding: 0px;
     border-radius: 10px;
-    display: flex;
+    display:flex;
     flex-direction: column;
     justify-content: center;
-    width: 30%;
+    width: 26%;
+    
     top:10%;
     z-index: 100;
     
     left:35%;
 }
+
 #thankCard h1{
     width: 100%;
     text-align: center;
@@ -289,9 +291,13 @@ b{
 }
 #thankCard div{
     width:"100px";
-    display:flex;
+    padding: 10px;
+    display:block;
     align-items: center;
     justify-content: center;
+    
+    
+    
 
 }
 #thankCard h2{
