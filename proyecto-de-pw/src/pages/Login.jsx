@@ -1,7 +1,29 @@
 import { Card, Form, Button, Container, Row, Col, Image } from 'react-bootstrap'
 import "bootstrap"
 import '../estilos/login.css'
+
 const Login = () => {
+    const httpLogin = async (user) => {
+        const resp = await fetch("http://localhost:4444/login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(user),
+        });
+        const data = await resp.json();
+        if (data.verify) {
+            // Login correcto.
+            setLogged(true)
+            alert(`Welcome ${user.email}.`);
+            window.location.href="http://localhost:3000/homepage"; // Redireccion con renderizado
+            localStorage.setItem("Usuario_correo",user.email)
+            
+        } else {
+            // No existe el usuario. Error.
+            setErrorLogin(true)
+        }
+    }
     
     return(
     <body className='login'>

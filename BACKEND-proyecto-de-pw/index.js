@@ -180,6 +180,28 @@ app.post("/registro", async (req, res) => {
     console.log(res.json().verify)
      
 })
+//Realizar Login
+app.post("/login", async (req, res) => {
+    const email = req.body.email
+    const password = req.body.password
+    const usuarioRegistrado = await Usuario.findAll({
+        where : {
+            Correo: email,
+            Contrasena: password
+        }
+    })
+    if (usuarioRegistrado.length == 0){
+        // No existe usuario
+        res.send({
+            verify: false
+        })
+    } else{
+        res.send({
+            verify: true
+        })
+    }
+    
+})
 /*
 app.post("/registro",async(req,resp) => {
     const dataRequest = req.body
