@@ -124,7 +124,7 @@ const ProfileInfo = () =>{
 
           <div className="col-md-6 pt-md-0 pt-3">
               <label htmlFor="depart">Departamento</label>
-              <input type="text" className="bg-lighdt form-control" placeholder={52}   onChange={(e) => setdep(e.target.value)} />
+              <input type="text" className="bg-lighdt form-control" placeholder={52}   onChange={(e) => setDepartment(e.target.value)} />
             </div>
           
        
@@ -145,7 +145,7 @@ const ProfileInfo = () =>{
                             httpModificarUsuario(user);
 
                             setName("");
-                            setdep("");
+                            setDepartment("");
                             setLastName("");
                             setEmail("");
                             setContra("");
