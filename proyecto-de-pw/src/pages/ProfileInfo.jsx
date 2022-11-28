@@ -18,18 +18,30 @@ const ProfileInfo = () =>{
               <input type="text" className="bg-light form-control" placeholder="Name" />
             </div>
             <div className="col-md-6 pt-md-0 pt-3">
-              <label htmlFor="username">Usuario</label>
+              <label htmlFor="username">Apellido</label>
               <input type="text" className="bg-light form-control" placeholder="Username" />
             </div>
           </div>
           <div className="row py-2">
             <div className="col-md-6">
-              <label htmlFor="email">Correo electronico</label>
+              <label htmlFor="email">Correo</label>
               <input type="text" className="bg-light form-control" placeholder="user@email.com" />
+            </div>
+            <div className="col-md-6">
+              <label htmlFor="password">Contraseña</label>
+              <input type="password" className="bg-light form-control" placeholder="user@email.com" />
             </div>
             <div className="col-md-6 pt-md-0 pt-3">
               <label htmlFor="phone">Numero de telefono</label>
               <input type="tel" className="bg-light form-control" placeholder={+51} />
+            </div>
+            <div className="col-md-6 pt-md-0 pt-3">
+              <label htmlFor="phone">Codigo Postal</label>
+              <input type="tel" className="bg-light form-control" placeholder={31} />
+            </div>
+            <div className="col-md-6 pt-md-0 pt-3">
+              <label htmlFor="phone">Direccion</label>
+              <input type="tel" className="bg-light form-control" placeholder="namek" />
             </div>
           </div>
           <div className="row py-2">
@@ -39,17 +51,34 @@ const ProfileInfo = () =>{
                 <option value="india" selected>Peru</option>
                 <option value="usa">USA</option>
                 <option value="uk">Brasil</option>
-                <option value="uae">Mexico</option>
+                <option value="uae">Argentina</option>
+                <option value="uae">Chile</option>
+                <option value="uae">Colombia</option>
+                <option value="uae">Venezuela</option>
+                <option value="uae">Italia</option>
+                <option value="uae">España</option>
+                <option value="uae">Francia</option>
               </select>
             </div>
             <div className="col-md-6 pt-md-0 pt-3" id="lang">
-              <label htmlFor="language">Idioma</label>
+              <label htmlFor="language">Departamento</label>
               <div className="arrow">
                 <select name="language" id="language" className="bg-light">
-                  <option value="english" selected>English</option>
-                  <option value="english_us">Español</option>
-                  <option value="enguk">Italiano</option>
-                  <option value="arab">Catalan</option>
+                  <option value="english" selected>Ancash</option>
+                  <option value="english_us">Arequipa</option>
+                  <option value="enguk">Ayacucho</option>
+                  <option value="arab">Callao</option>
+                  <option value="arab">Cajamarca</option>
+                  <option value="arab">Cusco</option>
+                  <option value="arab">La libertad</option>
+                  <option value="arab">Lambayeque</option>
+                  <option value="arab">Lima</option>
+                  <option value="arab">Pasco</option>
+                  <option value="arab">Piura</option>
+                  <option value="arab">Puno</option>
+                  <option value="arab">San Martin</option>
+                  <option value="arab">Tacna</option>
+                  <option value="arab">Tumbes</option>
                 </select>
               </div>
             </div>
