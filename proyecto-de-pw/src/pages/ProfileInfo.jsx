@@ -107,11 +107,12 @@ const ProfileInfo = () =>{
               <label htmlFor="phone">Codigo Postal</label>
               <input type="tel" className="bg-light form-control" placeholder={31}  value={zip} onChange={(e) => setZip(e.target.value)} />
             </div>
-            <div className="col-md-6 pt-md-0 pt-3">
+            <div className="col-md-6ss pt-md-0 pt-3">
               <label htmlFor="phone">Direccion</label>
               <input type="tel" className="bg-light form-control" placeholder="namek" value={address}
                 onChange={(e) => setAddress(e.target.value)}/>
             </div>
+            
           </div>
           <div className="row py-2">
             <div className="col-md-6">
@@ -119,8 +120,14 @@ const ProfileInfo = () =>{
               <input type="tel" className="bg-light form-control" placeholder="namek" value={country}
                 onChange={(e) => setCountry(e.target.value)}/>
             </div>
-            
           </div>
+
+          <div className="col-md-6 pt-md-0 pt-3">
+              <label htmlFor="depart">Departamento</label>
+              <input type="text" className="bg-lighdt form-control" placeholder={52}   onChange={(e) => setdep(e.target.value)} />
+            </div>
+          
+       
           <div>
             <button type="button" className="btn btn-outline-primary" onClick={()=>{
                         if (name!=="" && lastName!=="" && email!==""){
@@ -138,6 +145,7 @@ const ProfileInfo = () =>{
                             httpModificarUsuario(user);
 
                             setName("");
+                            setdep("");
                             setLastName("");
                             setEmail("");
                             setContra("");
