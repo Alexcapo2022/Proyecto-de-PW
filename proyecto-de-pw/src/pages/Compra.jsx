@@ -101,7 +101,12 @@ const Compra = ()=>{
         
    
       </div>
+<<<<<<< HEAD
       <a href="/PaginaPrincipal"><button id="thankCardbutton" onClick={()=>{deleteItems()}} >Submit</button></a>
+=======
+      <a href="/PaginaPrincipal"><button id="thankCardbutton" onClick={()=>{deleteItems()}}>Submit</button></a>
+      <a href="/PaginaPrincipal"><button id="thankCardbutton" onClick={()=>{deleteItems()}}>Back Menu</button></a>
+>>>>>>> 379c7c7b433f03c39cc8b7ecbfaccdfbbf44c277
     </div>
     }
   }
