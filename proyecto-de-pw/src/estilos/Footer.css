@@ -1,22 +1,21 @@
 
 .Footer{
-    width: 100%;
+    width: 196.3%;
     background-image: url("http://localhost:4444/HR/Fondo_monta%C3%B1as.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px;
-    height: 40vh;
+    height: 29vh;
     color:white;
-    margin-right : 0 !important;
-    margin-left : 0 !important;
+    margin-right : 0px !important;
+    margin-left : -625px !important;
     margin-bottom: 0 !important;
     padding-right : 0 !important;
     padding-left : 0 !important;
     padding-bottom: 0 !important;
     
-    margin-top: 60px;
+    margin-top: 0px;
 }
-
 .Footer h5{
     margin-top: 30px;
     margin-left: 10px;
