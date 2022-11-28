@@ -101,7 +101,7 @@ const Registro = () => {
                             setPassword("");
 
                         } else {
-                            alert("Fill out all the information!");
+                            alert("Completa los formularios correctamente!");
                         }
                         }}>Registrarse</Button></a>{(() => {
                             if (errorRegistro) {

@@ -16,7 +16,7 @@ const ProfileInfo = () =>{
     const [modTrigger, setModTrigger]=useState(false);
     const [errorCorreo,setErrorCorreo]=useState(false);
     const [Usuario,setUsuario]=useState([])
-    const [errorRegistro, setErrorRegistro] = useState(false)
+    
 
     useEffect(() => {
       if(errorCorreo === false && modTrigger){

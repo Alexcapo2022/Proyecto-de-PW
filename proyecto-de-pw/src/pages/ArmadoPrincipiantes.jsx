@@ -29,18 +29,36 @@ const ArmadoPrincipiantes = (props) =>{
         props.callback(emoji);
       }
    };
-/*
+
    const [listadoPrincipiante,setListadoPrincipainte] = useState ([])
-   const httpObtenerOpciones = async () => {
-    const resp = await fetch("http://localhost:4444/pc_armado")
+   const httpObtenerOpciones = async (tipo) => {
+    const resp = await fetch(`http://localhost:9999/PC_armado?tipo=${tipo}`)
     const data = await resp.json()
     console.log(data)
     setListadoPrincipainte(data)
    }
    useEffect(()=>{
-    httpObtenerOpciones()
-   },[])
-*/
+    console.log(`probando${selected}`)
+    if(selected===1){
+        httpObtenerOpciones("gaming")
+    }
+    if(selected===2){
+        httpObtenerOpciones("design")
+    }
+    if(selected===3){
+        httpObtenerOpciones("coding")
+    }
+    if(selected===4){
+        httpObtenerOpciones("rendering")
+    }
+    if(selected===5){
+        httpObtenerOpciones("office")
+    }
+    if(selected===6){
+        httpObtenerOpciones("other")
+    }
+},[selected])
+
     return(
         <div>
           <div className="inline" style={{paddingBottom: "50px"}} id="mobile-boptions-nav"><h1 style={{width:"70%"}}>What do you need?</h1>

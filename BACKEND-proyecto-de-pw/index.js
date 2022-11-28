@@ -364,7 +364,7 @@ app.delete("/registro/:id",async(req,resp)=>{
 //POST PARA CREAR REPORTE
 app.post("/reporte",async(req,resp)=>{
     const dataRequest = req.body
-    
+    //const usuario_id = dataRequest.userId
     const correo = dataRequest.correo
     const Nombre = dataRequest.nombre
     const Telefono = dataRequest.telefono
@@ -381,7 +381,7 @@ app.post("/reporte",async(req,resp)=>{
             Descripcion : Descripcion,
             id_usuario : "2babb094-7f68-45d1-86b3-ad685a6a1b69",
             
-        })
+        },{where: {Correo : correo}})
         
     } catch (error) {
         resp.send({
@@ -390,7 +390,7 @@ app.post("/reporte",async(req,resp)=>{
         return
     }
     resp.send({
-        error : ""
+        error : "Report enviado correctamente"
     })
 })
 //POST PARA CREAR RESEÑA

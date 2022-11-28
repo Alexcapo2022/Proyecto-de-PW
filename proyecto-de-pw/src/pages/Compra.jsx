@@ -4,6 +4,9 @@ import { useState } from "react";
 
 
 const Compra = ()=>{
+
+  const [Department, setDepartment] = useState("");
+
     const [star,setStar]=useState(0);
     const [done,setDone]=useState(false);
     let possibleCheckoutItems;
