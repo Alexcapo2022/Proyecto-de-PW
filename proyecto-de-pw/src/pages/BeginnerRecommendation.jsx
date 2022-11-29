@@ -99,7 +99,7 @@ const BeginnerRecommendation =()=>{
     </div>
     <div className="row" id="content-beginner-recommendation-grid-row">
         <div className="col-5" id="mobile-brecommend-col1">
-            <img src="/images/pc.png" alt="" style={{width: "100%",marginLeft: "-40px"}}/>
+            <img src="/images/pc.png" alt="" style={{width: "90%",marginLeft: "-40px"}}/>
             <div style={{backgroundColor:"#4AB4DD", padding: "20px",borderRadius: "20px",width:"90%"}} >
             <div className="row" style={{textAlign:"center"}} >
                 <div className="col">Components price</div>
@@ -113,9 +113,11 @@ const BeginnerRecommendation =()=>{
         </div>
         <div className="col-7" id="mobile-brecommend-col2">
             <h2 style={{marginBottom:"50px"}}>Components</h2>
-            <div id="beginner-components-grid" style={{backgroundColor:"rgba(0, 0, 0, 0.5)",padding: "30px",borderRadius:"20px"}}>
+            <div id="beginner-components-grid" style={{backgroundColor:"rgba(0, 0, 0, 0.2)",padding: "50px",borderRadius:"50px", width: "70%"}}>
+                
                 {printItems()}
             </div>
+            
         </div>
     </div>
 </div>

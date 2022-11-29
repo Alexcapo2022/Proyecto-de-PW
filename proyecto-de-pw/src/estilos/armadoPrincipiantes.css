@@ -22,8 +22,8 @@
 }
 
 .container3 .card2:hover{
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-55px);
+    box-shadow: 10px 12px 60px black;
 }
 
 .container3 .card2 img{
@@ -46,4 +46,7 @@
     font-weight: 500;
     text-decoration: none;
     color: #3498db;
+}
+.col{
+    width: 330px;
 }

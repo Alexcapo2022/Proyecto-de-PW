@@ -180,6 +180,28 @@ app.post("/registro", async (req, res) => {
     console.log(res.json().verify)
      
 })
+//Realizar Login
+app.post("/login", async (req, res) => {
+    const email = req.body.email
+    const password = req.body.password
+    const usuarioRegistrado = await Usuario.findAll({
+        where : {
+            Correo: email,
+            Contraseña: password
+        }
+    })
+    if (usuarioRegistrado.length == 0){
+        // No existe usuario
+        res.send({
+            verify: false
+        })
+    } else{
+        res.send({
+            verify: true
+        })
+    }
+    
+})
 /*
 app.post("/registro",async(req,resp) => {
     const dataRequest = req.body
@@ -209,12 +231,19 @@ app.post("/registro",async(req,resp) => {
     })
 
 })*/
+//devolver correo
+app.get("/vercorreo", async(req, resp)=>{
+    const correo = req.query.correo;
+    const listadoCuentas = await Usuario.findAll({
+        where : {
+            Correo: correo
+        }
+    })
+    resp.send(listadoCuentas)
+})
 //PARA EDITAR USUARIO
-app.put("/registro/:id",async(req,resp)=>{
-    
-    const dataRequest = req.body
-    console.log(req.params)
-    console.log(req.body)
+app.put("/registro/:correo",async(req,resp)=>{
+    /*const dataRequest = req.body
     const Id= req.params.id
     const nombreID = dataRequest.nombre
     const apellidoID = dataRequest.apellido
@@ -226,32 +255,81 @@ app.put("/registro/:id",async(req,resp)=>{
     const Departamento = dataRequest.departamento
     const Codigo_Postal = dataRequest.cp
 
-    try {
-        await Usuario.update({
-            Nombre : nombreID,
-            Apellido : apellidoID,
-            Correo : correo,
-            Contraseña : Contraseña,
-            Pais : Pais,
-            Direccion : Direccion,
-            Celular : Celular,
-            Departamento : Departamento,
-            Codigo_Postal : Codigo_Postal,
-
-        },{where: {id : Id}})
-
-        
-    } catch (error) {
-        resp.send({
-            error : `ERROR. ${error}`
-        })
-        return
-    }
-    resp.send({
-        error : ""
+    const correoExistente = await Usuario.findAll({
+        where : {
+            Correo : correo
+        }
     })
+    console.log(correoExistente.length)
+    if (correoExistente.length == 0){
+        try {
+            await Usuario.update({
+                Nombre : nombreID,
+                Apellido : apellidoID,
+                Correo : correo,
+                Contraseña : Contraseña,
+                Pais : Pais,
+                Direccion : Direccion,
+                Celular : Celular,
+                Departamento : Departamento,
+                Codigo_Postal : Codigo_Postal,
+    
+            },{where: {Correo : correo}})
+    
+            
+        } catch (error) {
+            resp.send({
+                error : `ERROR. ${error}`
+            })
+            return
+        }
+        resp.send({
+            error : ""
+        })}
+    console.log(resp.json().verify)
+})*/   
+const dataRequest = req.body
+console.log(req.params)
+console.log(req.body)
+const Id= req.params.id
+const nombreID = dataRequest.nombre
+const apellidoID = dataRequest.apellido
+const correo = dataRequest.correo
+const Contraseña = dataRequest.contra
+const Pais = dataRequest.pais
+const Direccion = dataRequest.direc
+const Celular = dataRequest.celular
+const Departamento = dataRequest.departamento
+const Codigo_Postal = dataRequest.cp
+
+try {
+    await Usuario.update({
+        Nombre : nombreID,
+        Apellido : apellidoID,
+        Correo : correo,
+        Contraseña : Contraseña,
+        Pais : Pais,
+        Direccion : Direccion,
+        Celular : Celular,
+        Departamento : Departamento,
+        Codigo_Postal : Codigo_Postal,
+
+    },{where: {Correo : correo}})
+
+    
+} catch (error) {
+    resp.send({
+        error : `ERROR. ${error}`
+    })
+    return
+}
+resp.send({
+    error : ""
+})
 
 })
+
+
 //Para realizar el LOGIN
 //Login
 app.post("/login", async (req, res) => {
@@ -286,7 +364,7 @@ app.delete("/registro/:id",async(req,resp)=>{
 //POST PARA CREAR REPORTE
 app.post("/reporte",async(req,resp)=>{
     const dataRequest = req.body
-    
+    //const usuario_id = dataRequest.userId
     const correo = dataRequest.correo
     const Nombre = dataRequest.nombre
     const Telefono = dataRequest.telefono
@@ -303,7 +381,7 @@ app.post("/reporte",async(req,resp)=>{
             Descripcion : Descripcion,
             id_usuario : "2babb094-7f68-45d1-86b3-ad685a6a1b69",
             
-        })
+        },{where: {Correo : correo}})
         
     } catch (error) {
         resp.send({
@@ -312,14 +390,13 @@ app.post("/reporte",async(req,resp)=>{
         return
     }
     resp.send({
-        error : ""
+        error : "Report enviado correctamente"
     })
 })
 //POST PARA CREAR RESEÑA
 app.post("/resena",async(req,resp)=>{
     const dataRequest = req.body
     const Puntaje = dataRequest.puntaje
-    console.log(dataRequest.comentario)
     const Comentario = dataRequest.comentario
     const Video = dataRequest.video
     const Link = dataRequest.link
@@ -364,6 +441,29 @@ app.get("/reporte",async(req,resp)=>{
     }
 })
 //Muestra las reseñas filtradas por Persona
+app.get("/listadoUsuario",async(req,resp)=>{
+    const Usuarioid=req.query.usuario
+    if(Usuarioid!=undefined){
+        
+        const listadoUsuario= await Usuario.findAll({
+            where:{
+                id:Usuarioid
+            }
+        })
+        resp.send(listadoUsuario)
+    }else{
+        const listadoResena= await Resena.findAll({
+            include: {
+                model:Usuario,
+                where : {
+                    Nombre:"Roberto",
+                }
+            }
+        })
+        resp.send(listadoResena)
+    }
+})
+
 app.get("/resena",async(req,resp)=>{
     const Usuarioid=req.query.usuario
     if(Usuarioid!=undefined){
@@ -371,7 +471,15 @@ app.get("/resena",async(req,resp)=>{
             where:{
                 id_usuario:Usuarioid
             }
+        })  
+        const listadoUsuario= await Usuario.findAll({
+            where:{
+                id:Usuarioid
+            }
         })
+        
+        listadoResena[0]["Nombre"]=listadoUsuario["Nombre"]
+        
         resp.send(listadoResena)
     }else{
         const listadoResena= await Resena.findAll({
@@ -385,6 +493,106 @@ app.get("/resena",async(req,resp)=>{
         resp.send(listadoResena)
     }
 })
+
+app.get("/Periferico",async(req,resp)=>{
+    const nombre = req.query.nombre
+    if(nombre==undefined ){
+        const listadoProducto = await Producto.findAll()
+        resp.send(listadoProducto)
+    }else{
+        const listadoProducto = await Producto.findAll({
+            where:{
+                Nombre: nombre
+            }
+        })
+        resp.send(listadoProducto)
+    }
+    
+})
+
+app.post("/orden",async(req,resp)=>{
+
+    await Producto.sync()
+    await Orden.sync()
+    await Orden_Producto.sync()
+
+    const Delete= req.query.delete
+    
+    if(Delete=="true"){
+        await Orden.destroy({
+            where:{},
+            truncate:true
+        })
+        await Orden_Producto.destroy({
+            where:{},
+            truncate:true
+        })
+    }
+    if(Delete==undefined){
+    const Productos = req.body.possibleCheckoutItems.list
+    const userid=req.body.userid
+
+    console.log("i got a request to post")
+
+    const OrdenId= crypto.randomUUID()
+     
+    await Orden.create({
+        Orden_id: `${OrdenId}`,
+        Usuario_id: `${userid}`,
+        Monto:"1",
+        Direccion:"12",
+        Fecha:new Date().toJSON()
+    })
+
+    
+
+    for(let i=0;i<Productos.length;i++){
+        const temp = await Producto.findOne({
+            where:{
+                Nombre: Productos[i].name
+            }
+        })
+        await Orden_Producto.create({
+            Orden_Producto_id:`${crypto.randomUUID()}`,
+            Producto_id:temp.Producto_id,
+            Orden_id: `${OrdenId}`
+        })
+    }
+    }
+    
+    
+
+      resp.end()
+
+})
+
+
+app.get("/Orden",async(req,resp)=>{
+    const userid=req.query.userid
+
+    if(userid==undefined || userid==null){
+        
+        const listadoOrden=await Orden_Producto.findAll({
+            include:Producto
+        })
+        resp.send(listadoOrden)
+    }else{
+        const listadoOrdenOg=await Orden.findAll({
+            where:{
+                Usuario_id:userid
+            },
+            include:{
+                model:Orden_Producto,
+                include:Producto
+            }
+        })
+        resp.send(listadoOrdenOg)
+    }
+    
+
+    
+})
+
 
 app.listen(PUERTO, () => { 
     console.log(`Servidor web iniciado en puerto ${PUERTO}`)

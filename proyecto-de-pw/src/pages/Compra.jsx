@@ -1,7 +1,34 @@
 import React from "react";
 import { useState } from "react";
 
+
+
 const Compra = ()=>{
+
+  const [puntaje, setPuntaje] = useState("");
+  const [comentario, setComentario] = useState("");
+  const [video, setVideo] = useState("");
+  const [link, setLink] = useState("");
+
+  const httpGuardarReseña = async (user) => {
+        
+    const resp = await fetch("http://localhost:4444/resena", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+    });
+    const data = await resp.json();
+    if (data.verify) {
+        // Se registró satisfactoriamente.
+        alert("Se envio correctamente");  
+    } 
+}
+
+
+
+
     const [star,setStar]=useState(0);
     const [done,setDone]=useState(false);
     let possibleCheckoutItems;
@@ -53,10 +80,55 @@ const Compra = ()=>{
         <button onClick={()=>{setStar(3)}}><img src={star>=3?"/icons/star-filled.png":"/icons/star-unfilled.png"}  id="thankCardstar" alt=""/></button>
         <button onClick={()=>{setStar(4)}}><img src={star>=4?"/icons/star-filled.png":"/icons/star-unfilled.png"}  id="thankCardstar" alt=""/></button>
         <button onClick={()=>{setStar(5)}}><img src={star>=5?"/icons/star-filled.png":"/icons/star-unfilled.png"}  id="thankCardstar" alt="" /></button>
+
+                
+        <div className="col-md-6 pt-md-0 pt-3">
+              <label htmlFor="depart">Puntaje</label>
+              <input type="text" className="bg-lighdt form-control" placeholder=""   value={puntaje} onChange={(e) => setPuntaje(e.target.value)} required />
+        </div>
+        <div className="col-md-6 pt-md-0 pt-3">
+              <label htmlFor="depart">comentario</label>
+              <input type="text" className="bg-lighdt form-control" placeholder=""  value={comentario} onChange={(e) => setComentario(e.target.value)} required/>
+        </div>
+        <div className="col-md-6 pt-md-0 pt-3">
+              <label htmlFor="depart">Video</label>
+              <input type="text" className="bg-lighdt form-control" placeholder=""   value={video} onChange={(e) => setVideo(e.target.value)} required />
+        </div>
+        <div className="col-md-6 pt-md-0 pt-3">
+              <label htmlFor="depart">Link</label>
+              <input type="text" className="bg-lighdt form-control" placeholder=""  value={link} onChange={(e) => setLink(e.target.value)} required />
+        </div>
+        
+   
       </div>
-      <a href="/PaginaPrincipal"><button id="thankCardbutton" onClick={()=>{deleteItems()}}>Submit</button></a>
+
+      <a href="/PaginaPrincipal"><button id="thankCardbutton" onClick={()=>{deleteItems()}}>Back to menu</button></a>
+      <a href="#"><button id="thankCardbutton" onClick={() => {
+                            if (puntaje !== "" && comentario !== "") {
+                            const user = {};
+                            user.puntaje = puntaje;
+                            user.comentario = comentario;
+                            user.video = video;
+                            user.link = link;
+                            
+
+                            httpGuardarReseña(user);
+
+                            setComentario("");
+                            setPuntaje("");
+                            setVideo("");
+                            setLink("");
+
+                        } else {
+                            alert("Completa los formularios correctamente!");
+                        }
+                        }}>Submit</button></a>
+
     </div>
     }
+  }
+  const todos = () =>{
+    
   }
   const saveHistory = () =>{
     

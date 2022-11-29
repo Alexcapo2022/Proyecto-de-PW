@@ -28,7 +28,9 @@ const Registro = () => {
         if (data.verify) {
             // Se registró satisfactoriamente.
             alert("Cuenta registrada satisfactoriamente!");
-            //setSelection("login");
+            window.location.href="http://localhost:3000/"; // Redireccion con renderizado
+            localStorage.setItem("Usuario_correo",user.email)
+            
         } else {
             // Correo ya registrado.
             alert("Ya existe el usuario, intente nuevamente!");
@@ -79,7 +81,7 @@ const Registro = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                                 required />
                             </Form.Group>
-                            <a id="create-account" href='/'><Button className='mt-3' variant='warning' id="create-button" onClick={() => {
+                            <a id="create-account" href="#/" ><Button className='mt-3' variant='warning' id="create-button" onClick={() => {
                             if (name !== "" && lastName !== "" && email !== "" && password !== "") {
                             const user = {};
                             user.name = name;
@@ -101,7 +103,7 @@ const Registro = () => {
                             setPassword("");
 
                         } else {
-                            alert("Fill out all the information!");
+                            alert("Completa los formularios correctamente!");
                         }
                         }}>Registrarse</Button></a>{(() => {
                             if (errorRegistro) {

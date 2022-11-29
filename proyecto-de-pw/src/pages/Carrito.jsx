@@ -67,9 +67,9 @@ const Carrito =()=>{
                     <button className="botonAA1" >Checkout </button></a>
         </div>
             <div className="col" id="mobile-cart">
-                <div style={{width:"90%",marginTop: "50px"}}>
-                <div style={{marginRight:"auto",marginLeft:"auto",width:"30%",backgroundColor:"rgba(0, 0, 0, 0.5)",textAlign:"center",borderTopRightRadius:"10px",borderTopLeftRadius:"10px",padding:"10px"}} id="mobile-cart-pad"><b>${getPrice()}</b></div>
-                <div id="list-checkout" style={{width:"60%",marginLeft:"auto",marginRight:"auto",backgroundColor:"rgba(0, 0, 0, 0.5)",padding: "20px",borderRadius:"10px"}} >
+                <div style={{width:"290%",marginTop: "160px"}}>
+                <div style={{marginRight:"-350px",marginLeft:"auto",width:"30%",backgroundColor:"rgba(0, 0, 0, 0.5)",textAlign:"center",borderTopRightRadius:"10px",borderTopLeftRadius:"10px",padding:"10px"}} id="mobile-cart-pad"><b>${getPrice()}</b></div>
+                <div id="list-checkout" style={{width:"90%",marginLeft:"500px",marginRight:"50px",backgroundColor:"rgba(0, 0, 0, 0.5)",padding: "10px",borderRadius:"10px"}} >
                 {showPossibleCheckout(click)}
                 </div>
                 

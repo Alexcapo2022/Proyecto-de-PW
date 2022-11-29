@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/Button';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import '../estilos/navbar.css';
 import Form from 'react-bootstrap/Form';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons"
@@ -39,6 +40,7 @@ function NavBar() {
                   />
                   <Button id="icons" href="Buscar"><FontAwesomeIcon icon={faMagnifyingGlass} /></Button>
                 </Form>
+
           <Nav>
           <Nav.Link href="/User" id="icons"><FontAwesomeIcon icon={faUser} /></Nav.Link>
           <Nav.Link href="/Carrito" id="icons"><FontAwesomeIcon icon={faCartShopping} color="white"/></Nav.Link>

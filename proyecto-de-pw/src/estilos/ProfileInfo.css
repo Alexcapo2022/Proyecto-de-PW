@@ -79,9 +79,14 @@ select:focus{
 }
 .btn-outline-primary{
     background-color: #3b77af;
+    margin: 10px auto;
+    
+    
+
 }
 .btn-primary{
     background-color: #3b77af;
+    
 }
 .danger{
     background-color: #fff;
@@ -118,3 +123,8 @@ b{
     margin:auto; 
     display:block;
 }
+
+
+
+
+
