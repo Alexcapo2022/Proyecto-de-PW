@@ -494,6 +494,106 @@ app.get("/resena",async(req,resp)=>{
     }
 })
 
+app.get("/Periferico",async(req,resp)=>{
+    const nombre = req.query.nombre
+    if(nombre==undefined ){
+        const listadoProducto = await Producto.findAll()
+        resp.send(listadoProducto)
+    }else{
+        const listadoProducto = await Producto.findAll({
+            where:{
+                Nombre: nombre
+            }
+        })
+        resp.send(listadoProducto)
+    }
+    
+})
+
+app.post("/orden",async(req,resp)=>{
+
+    await Producto.sync()
+    await Orden.sync()
+    await Orden_Producto.sync()
+
+    const Delete= req.query.delete
+    
+    if(Delete=="true"){
+        await Orden.destroy({
+            where:{},
+            truncate:true
+        })
+        await Orden_Producto.destroy({
+            where:{},
+            truncate:true
+        })
+    }
+    if(Delete==undefined){
+    const Productos = req.body.possibleCheckoutItems.list
+    const userid=req.body.userid
+
+    console.log("i got a request to post")
+
+    const OrdenId= crypto.randomUUID()
+     
+    await Orden.create({
+        Orden_id: `${OrdenId}`,
+        Usuario_id: `${userid}`,
+        Monto:"1",
+        Direccion:"12",
+        Fecha:new Date().toJSON()
+    })
+
+    
+
+    for(let i=0;i<Productos.length;i++){
+        const temp = await Producto.findOne({
+            where:{
+                Nombre: Productos[i].name
+            }
+        })
+        await Orden_Producto.create({
+            Orden_Producto_id:`${crypto.randomUUID()}`,
+            Producto_id:temp.Producto_id,
+            Orden_id: `${OrdenId}`
+        })
+    }
+    }
+    
+    
+
+      resp.end()
+
+})
+
+
+app.get("/Orden",async(req,resp)=>{
+    const userid=req.query.userid
+
+    if(userid==undefined || userid==null){
+        
+        const listadoOrden=await Orden_Producto.findAll({
+            include:Producto
+        })
+        resp.send(listadoOrden)
+    }else{
+        const listadoOrdenOg=await Orden.findAll({
+            where:{
+                Usuario_id:userid
+            },
+            include:{
+                model:Orden_Producto,
+                include:Producto
+            }
+        })
+        resp.send(listadoOrdenOg)
+    }
+    
+
+    
+})
+
+
 app.listen(PUERTO, () => { 
     console.log(`Servidor web iniciado en puerto ${PUERTO}`)
 })
