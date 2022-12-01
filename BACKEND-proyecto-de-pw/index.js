@@ -35,6 +35,15 @@ app.get("/productos",async (req,resp) => {
     const listaProductos = await Producto.findAll()
 
     resp.send(listaProductos)
+    let type = req.query.Categoria
+    let items = req.query.Id
+    if (type == "array"){
+        let id_prod = req.query.Id.split(',')
+        items = []
+        items = id_prod.listapc_ArmadoProducto(item =>{
+            return Sequelize.Producto(item)
+        })
+    return resp.status(200).send(document)}
 })
 
 // Mostrar PcArmado
