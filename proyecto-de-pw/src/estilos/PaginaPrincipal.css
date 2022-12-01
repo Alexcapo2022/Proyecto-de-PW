@@ -101,7 +101,7 @@ header a:hover{
         rgba(0,0,0,0.5)
 
     )
-    ,url(${RUTA_BACKEND}/icons/hero.jpg);
+    ,url();
     background-position: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -149,7 +149,7 @@ header a:hover{
         rgba(0,0,0,0.5)
 
     )
-    ,url(${RUTA_BACKEND}/icons/tarjetaGrafica.jpg);
+    ,url(../imagenes/tarjetaGrafica.jpg);
 
 }
 .carta:nth-child(2){
@@ -159,7 +159,7 @@ header a:hover{
         rgba(0,0,0,0.5)
 
     )
-    ,url(${RUTA_BACKEND}/icons/ram.jpg);
+    ,url(../imagenes/ram.jpg);
 }
 .carta:nth-child(3){
     background-image: linear-gradient(
@@ -168,7 +168,7 @@ header a:hover{
         rgba(0,0,0,0.5)
 
     )
-    ,url(${RUTA_BACKEND}/icons/CPU.jpg);
+    ,url(../imagenes/CPU.jpg);
 }
 .carta:nth-child(4){
     background-image: linear-gradient(
@@ -177,7 +177,7 @@ header a:hover{
         rgba(0,0,0,0.5)
 
     )
-    ,url(${RUTA_BACKEND}/icons/perifericos.jpg);
+    ,url(../imagenes/perifericos.jpg);
 }
 
 
@@ -263,7 +263,7 @@ footer p{
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
-    ),url(${RUTA_BACKEND}/icons/Setup.jpg);
+    ),url(../imagenes/Setup.jpg);
     background-size: cover;
     background-position: center center;
     height: 500px;
@@ -294,7 +294,7 @@ footer p{
     height: 500px;
     width: 500px;
     left: 50%;
-    background-image: url(${RUTA_BACKEND}/icons/garantia.jpg);
+    background-image: url(../imagenes/garantia.jpg);
    
 }
 
@@ -390,6 +390,6 @@ footer p{
     height: 500px;
     width: 500px;
     left: 50%;
-    background-image: url(${RUTA_BACKEND}/icons/garantia.jpg);
+    background-image: url(../imagenes/garantia.jpg);
    
 }

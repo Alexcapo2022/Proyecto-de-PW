@@ -87,7 +87,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src={`${RUTA_BACKEND}/periphereals/QUADCAST.jpg`}
+            src="../imagenes/pheriphereals/MICROFONO-HYPERX-QUADCAST"
             className="card-img-top"
             alt="..."
           />
