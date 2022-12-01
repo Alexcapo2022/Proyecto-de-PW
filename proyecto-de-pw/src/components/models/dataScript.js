@@ -11,113 +11,113 @@ let componentsPrice=0;
 export const  graphicItems=[{
     "name":"NVIDIA GeForce GTx base",
     "price":200,
-    "img":`/src/imagenes/graphic.png`
+    "img":"images/graphic.png"
 },{
     "name":"NVIDIA GeForce GTx max",
     "price":200,
-    "img":`/src/imagenes/graphic.png`
+    "img":"images/graphic.png"
 },{
     "name":"NVIDIA GeForce Metal",
     "price":200,
-    "img":`/src/imagenes/graphic.png`
+    "img":"images/graphic.png"
 },{
     "name":"NVIDIA GeForce Omega",
     "price":400,
-    "img":`/src/imagenes/graphic.png`
+    "img":"images/graphic.png"
 }];
 export const processorItems=[{
     "name":"Intel I3",
     "price":200,
-    "img":`/src/imagenes/processor.png`
+    "img":"images/processor.png"
 },{
     "name":"Intel I5",
     "price":200,
-    "img":`/src/imagenes/processor.png`
+    "img":"images/processor.png"
 },{
     "name":"Intel I7",
     "price":200,
-    "img":`/src/imagenes/processor.png`
+    "img":"images/processor.png"
 },{
     "name":"Intel I9",
     "price":400,
-    "img":`/src/imagenes/processor.png` 
+    "img":"images/processor.png"
 }];
 export const memoryItems=[{
     "name":"RAM 4gb",
     "price":200,
-    "img":`/src/imagenes/memory.png`
+    "img":"images/memory.png"
 },{
     "name":"RAM 8gb",
     "price":200,
-    "img":`/src/imagenes/memory.png`
+    "img":"images/memory.png"
 },{
     "name":"RAM 16gb",
     "price":200,
-    "img":`/src/imagenes/memory.png`
+    "img":"images/memory.png"
 },{
     "name":"RAM 32gb",
     "price":400,
-    "img":`/src/imagenes/memory.png` 
+    "img":"images/memory.png"
 }];
 export const storageItems=[{
     "name":"Toshiba 500GB",
     "price":200,
-    "img":`/src/imagenes/storage.png`
+    "img":"images/storage.png"
 },{
     "name":"Toshiba 1TB",
     "price":200,
-    "img":`/src/imagenes/storage.png`
+    "img":"images/storage.png"
 },{
     "name":"Toshiba 2TB",
     "price":200,
-    "img":`$/src/imagenes/storage.png`
+    "img":"images/storage.png"
 },{
     "name":"Toshiba 3TB",
     "price":400,
-    "img":`/src/imagenes/storage.png` 
+    "img":"images/storage.png"
 }];
 export const coolerItems=[{
     "name":"Cooler 10",
     "price":200,
-    "img":`/src/imagenes/cooler.png`
+    "img":"images/cooler.png"
 },{
     "name":"Cooler 20",
     "price":200,
-    "img":`/src/imagenes/cooler.png`
+    "img":"images/cooler.png"
 },{
     "name":"Cooler 30",
     "price":200,
-    "img":`/src/imagenes/cooler.png`
+    "img":"images/cooler.png"
 },{
     "name":"Cooler 40",
     "price":400,
-    "img":`/src/imagenes/cooler.png`
+    "img":"images/cooler.png"
 }];
 export const windowsItems=[{
     "name":"Windows 8 32bit AMD",
     "price":200,
-    "img":`/src/imagenes/windows.png`
+    "img":"images/windows.png"
 },{
     "name":"Windows 8 64bit AMD",
     "price":200,
-    "img":`/src/imagenes/windows.png`
+    "img":"images/windows.png"
 },{
     "name":"Windows 8 64bit Intel",
     "price":200,
-    "img":`/src/imagenes/windows.png`
+    "img":"images/windows.png"
 },{
     "name":"Windows 8 64bit Intel",
     "price":400,
-    "img":`/src/imagenes/windows.png`
+    "img":"images/windows.png"
 }];
 export const powersupplyItems=[{
     "name":"PowerSupply Base",
     "price":200,
-    "img":`/src/imagenes/power.png`
+    "img":"images/power.png"
 },{
     "name":"PowerSupply Max",
     "price":200,
-    "img":`/src/imagenes/power.png`
+    "img":"images/power.png"
 }];
 
 export const gamingComponents = [
