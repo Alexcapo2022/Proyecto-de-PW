@@ -1,27 +1,8 @@
 import '../estilos/ranking.css'
-import { useState } from "react";
-import { useEffect } from "react";
-import Periferiferico from './Perifercios';
-
 
 const RankingPerifericos = () =>{
 
-  const [listadoPeriferico,SetPeriferico] = useState([])
-
-  const httpObtenerPeriferico = async () => {
-      const resp = await fetch(`http://localhost:4444/Periferico?nombre=HEADPHONES LOGITECH G432`)
-      const data = await resp.json()
-      SetPeriferico(data)
-      /*for (let index = 0; index < data.length; index++) {
-        data[index]["Nombre"] = data[0]["Nombre"];
-        console.log(data)
-    }*/
-      
-  }
-
-  useEffect(() => {
-    httpObtenerPeriferico()
-  }, [])
+  
 
     return(
         <div>
@@ -216,11 +197,6 @@ const RankingPerifericos = () =>{
           </div>
         </div>
       </div>
-    </div>
-    <div style={{ height: 500 }} className="item_container">
-     <Periferiferico periferico={listadoPeriferico}>
-      
-     </Periferiferico>
     </div>
   </section>
   </div>

@@ -1,6 +1,6 @@
 import '../estilos/ProfileInfo.css'
 import { useState } from "react";
-import { useEffect } from "react";
+
 
 const ProfileInfo = () =>{
 
@@ -13,30 +13,10 @@ const ProfileInfo = () =>{
     const [country,setCountry]=useState("");
     const [zip,setZip]=useState("");
     const [phone,setPhone]=useState("");
-    const [modTrigger, setModTrigger]=useState(false);
-    const [errorCorreo,setErrorCorreo]=useState(false);
-    const [Usuario,setUsuario]=useState([])
+    
     
 
-    useEffect(() => {
-      if(errorCorreo === false && modTrigger){
-          console.log("Entro!")
-          const tempUser={};
-          tempUser.Usuario_id=Usuario.Usuario_id;
-          tempUser.Nombre=name;
-          tempUser.Apellido=lastName;
-          tempUser.Correo=email;
-          tempUser.Direccion=address;
-          tempUser.Departamento=department;
-          tempUser.Password=contra;
-          tempUser.Pais=country;
-          tempUser.Codigo_postal=zip;
-          tempUser.Telefono=phone;
-          localStorage.setItem("user",JSON.stringify(tempUser));
-          localStorage.setItem("Usuario_correo", email);
-          
-      }
-    }, [errorCorreo]);
+    
 
     const httpModificarUsuario = async (user) => {
         
@@ -132,14 +112,14 @@ const ProfileInfo = () =>{
             <button type="button" className="btn btn-outline-primary" onClick={()=>{
                         if (name!=="" && lastName!=="" && email!==""){
                             const user = {};
-                            user.Usuario_id=Usuario.Usuario_id;
+                            
                             user.nombre=name;
                             user.apellido=lastName;
                             user.correo=email;
                             user.direc=address;
                             user.departamento=department;
                             user.contra=contra;
-                            user.Pais=country;
+                            user.pais=country;
                             user.cp=zip;
                             user.celular=phone;
                             httpModificarUsuario(user);
@@ -152,18 +132,12 @@ const ProfileInfo = () =>{
                             setAddress("");
                             setZip("");
                             setPhone("");
-                            
+                            setCountry("")
                         }else{
                             alert("At least fill the fullname, email and password");
                         }
                     }}
-                    >Guardar cambios</button>{(() => {
-                      if (errorCorreo) {
-                          return <div className="alert alert-danger">Error. El correo ya se encuentra registrado.</div>
-                      } else {
-                          return <div></div>
-                      }
-                  })()}
+                    >Guardar cambios</button>
             <button type="button" className="btn btn-outline-secondary">Cancelar</button>
           </div>
           <div className="d-sm-flex align-items-center pt-3" id="deactivate">

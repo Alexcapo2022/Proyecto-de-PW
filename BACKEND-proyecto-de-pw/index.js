@@ -6,7 +6,8 @@ const cors = require("cors")
 const { Usuario,Orden,Categoria,Producto,Orden_Producto,Reporte,Resena,PC_Armado_Producto,PC_Armado } = require("./dao")
 
 
-const PUERTO = 4444
+const PUERTO = process.env.PORT || 4444 //variable de entorno , se debe crear 
+
 
 const app = express()
 app.use(bodyParser.json())
