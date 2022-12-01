@@ -359,7 +359,7 @@ footer p{
         0deg,
         rgba(0,0,0,0.5),
         rgba(0,0,0,0.5)
-    ),url(${RUTA_BACKEND}/icons/Setup.jpg);
+    ),url(../imagenes/icons/Setup.jpg);
     background-size: cover;
     background-position: center center;
     height: 500px;

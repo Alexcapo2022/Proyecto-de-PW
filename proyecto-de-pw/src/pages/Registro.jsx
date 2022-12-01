@@ -16,7 +16,7 @@ const Registro = () => {
         
         const httpGuardarUsuarios = async (user) => {
         
-        const resp = await fetch(`${RUTA_BACKEND}/registro`, {
+        const resp = await fetch(`http://localhost:4444/registro`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

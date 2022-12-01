@@ -12,8 +12,8 @@ const Reviews= () =>{
     const [listadoreviews,SetReviews] = useState([])
 
     const httpObtenerReviews = async () => {
-        const resp = await fetch(`${RUTA_BACKEND}/resena?usuario=2babb094-7f68-45d1-86b3-ad685a6a1b69`)
-        const resp2 = await fetch(`${RUTA_BACKEND}/listadoUsuario?usuario=2babb094-7f68-45d1-86b3-ad685a6a1b69`)
+        const resp = await fetch(`http://localhost:4444/resena?usuario=2babb094-7f68-45d1-86b3-ad685a6a1b69`)
+        const resp2 = await fetch(`http://localhost:4444/listadoUsuario?usuario=2babb094-7f68-45d1-86b3-ad685a6a1b69`)
         const data = await resp.json()
         const data2 = await resp2.json()
         for (let index = 0; index < data.length; index++) {

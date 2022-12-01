@@ -39,7 +39,7 @@ const Login = () => {
                 <Card className= 'cuadro'>
                     <Card.Body>
                         <h2>Login</h2>
-                        <Image className='rounded-circle' display="block"  height="250px" width={300} src={`${RUTA_BACKEND}/imagenes/usuario.jpg`}/>
+                        <Image className='rounded-circle' display="block"  height="250px" width={300} src={`/src/imagenes/usuario.jpg`}/>
                         <Form>
                             <Form.Group>
                                 <Form.Label>

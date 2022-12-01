@@ -3,8 +3,6 @@ import React from "react";
 
 import '../estilos/armadoPrincipiantes.css';
 
-
-
 const ArmadoPrincipiantes = (props) =>{
 
 
@@ -92,7 +90,7 @@ const ArmadoPrincipiantes = (props) =>{
                 console.log(currentSelection);
                 onItemSelected(1);
             }}>
-        <img src={`${RUTA_BACKEND}/ArmadoPrincipiantes/gaming.jpg`} alt="" />
+        <img src={'/src/imagenes/ArmadoPrincipiantes/gaming.jpg'} alt="" />
       <h4>Gaming</h4>
       <p>Build the best gaming pc to play all the games</p>
     </div>
@@ -101,7 +99,7 @@ const ArmadoPrincipiantes = (props) =>{
                 console.log(currentSelection);
                 onItemSelected(2);
             }}>
-        <img src={`${RUTA_BACKEND}/ArmadoPrincipiantes/Design.jpg`} alt="" />
+        <img src={'/src/imagenes/ArmadoPrincipiantes/Design.jpg'} alt="" />
       <h4>Design</h4>
       <p>Build the best pc for your new creations in Photoshop</p>
     </div>
@@ -110,7 +108,7 @@ const ArmadoPrincipiantes = (props) =>{
                 console.log(currentSelection);
                 onItemSelected(3);
             }}>
-    <img src={`${RUTA_BACKEND}/ArmadoPrincipiantes/coding.png`} alt="" />
+    <img src={'/src/imagenes/ArmadoPrincipiantes/coding.png'} alt="" />
       <h4>Coding</h4>
       <p>Build the best pc to program code quickly</p>
     </div>
@@ -121,7 +119,7 @@ const ArmadoPrincipiantes = (props) =>{
                 console.log(currentSelection);
                 onItemSelected(4);
             }}>
-    <img src={`${RUTA_BACKEND}/ArmadoPrincipiantes/rendering.jpg`} alt="" />
+    <img src={'/src/imagenes/ArmadoPrincipiantes/rendering.jpg'} alt="" />
       <h4>Rendering</h4>
       <p>Build the best PC for rendering in After Effects</p>
     </div>
@@ -130,7 +128,7 @@ const ArmadoPrincipiantes = (props) =>{
                 console.log(currentSelection);
                 onItemSelected(5);
             }}>
-    <img src={`${RUTA_BACKEND}/ArmadoPrincipiantes/office.jpg`} alt="" />
+    <img src={'/src/imagenes/ArmadoPrincipiantes/office.jpg'} alt="" />
       <h4>Office</h4>
       <p>Build the best PC for your office economically</p>
     </div>
@@ -139,7 +137,7 @@ const ArmadoPrincipiantes = (props) =>{
                 console.log(currentSelection);
                 onItemSelected(6);
             }}>
-        <img src={(`${RUTA_BACKEND}/ArmadoPrincipiantes/other.jpg`)} alt="" /> 
+        <img src={('/src/imagenes/ArmadoPrincipiantes/Other.jpg')} alt="" /> 
       <h4>Other</h4>
       <p>An alternative option if you are looking to build your pc</p>
       

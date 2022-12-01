@@ -23,7 +23,7 @@ const About =() =>{
                     <p id="letra"><i>OWN!</i></p>
                 </Row> 
                 <Row className="flexi">
-                    <Image src={`${RUTA_BACKEND}/HR/coding.png`} id="imagen15"/>
+                    <Image src={'/src/imagenes/HR/coding.png'} id="imagen15"/>
                     <Row className="alinearl">
                         <p id="letra3"><i>OUR MISSION IS TO BUILD GAMING PCS AT THE</i></p>
                         <p id="letra3"><i>BEST PRICE WITHOUT CUTTING CORNERS.</i></p>
