@@ -16,7 +16,7 @@ const Support = ()=>{
                 FAQ
                 </button></a></div>
             <div className="col"><a href="Support/SubmitTicket"><button id="content-support-hub-button" >
-            <img src={`${RUTA_BACKEND}/icons/submit.png`} alt=""/>
+            <img src={ `${ RUTA_BACKEND }/icons/submit.png` } alt=""/>
                 Submit ticket
                 </button></a></div>
         </div>
