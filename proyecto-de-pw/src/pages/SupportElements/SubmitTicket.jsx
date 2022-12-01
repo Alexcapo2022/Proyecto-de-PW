@@ -1,5 +1,9 @@
 import { useState } from "react";
+<<<<<<< HEAD
 import { RUTA_BACKEND } from '../SupportElements/conf';
+=======
+import { RUTA_BACKEND } from '../conf';
+>>>>>>> be26cf132befe91d632825e0a7512defeeb5f5f2
 const SubmitTicket =() =>{
         const [name, setName] = useState("");
         const [email, setEmail] = useState("");
