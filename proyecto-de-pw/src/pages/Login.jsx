@@ -24,7 +24,7 @@ const Login = () => {
             // Login correcto.
             setLogged(true)
             alert(`Welcome ${user.email}.`);
-            window.location.href="http://localhost:3000/PaginaPrincipal"; // Redireccion con renderizado
+            window.location.href="http://localhost:4445/PaginaPrincipal"; // Redireccion con renderizado
             localStorage.setItem("Usuario_correo",user.email)
             
         } else {
