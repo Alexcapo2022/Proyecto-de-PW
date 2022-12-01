@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-
+import { RUTA_BACKEND } from '../conf';
 
 
 const Compra = ()=>{

@@ -1,5 +1,5 @@
 import '../estilos/Support.css'
-
+import { RUTA_BACKEND } from '../conf';
 
 const Support = ()=>{
     return (

@@ -7,7 +7,7 @@ import React from "react";
 import "../estilos/estilosReq.css"
 import { useState } from "react";
 import { useEffect } from "react";
-
+import { RUTA_BACKEND } from '../conf';
 const Reviews= () =>{
     const [listadoreviews,SetReviews] = useState([])
 
