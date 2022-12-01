@@ -8,15 +8,15 @@ const Support = ()=>{
         <h1>Support hub</h1>
         <div className="row" id="content-support-hub">
             <div className="col"><a href="Support/Guides"><button id="content-support-hub-button">
-            <img src="http://localhost:4444/icons/guide.png" alt=""/>
+            <img src={`${RUTA_BACKEND}/icons/guide.png`} alt=""/>
                 Guides
                 </button></a></div>
             <div className="col"><a href="Support/Faq"><button id="content-support-hub-button" >
-            <img src="http://localhost:4444/icons/faq.png" alt=""/>
+            <img src={`${RUTA_BACKEND}/icons/faq.png`} alt=""/>
                 FAQ
                 </button></a></div>
             <div className="col"><a href="Support/SubmitTicket"><button id="content-support-hub-button" >
-            <img src="http://localhost:4444/icons/submit.png" alt=""/>
+            <img src={`${RUTA_BACKEND}/icons/submit.png`} alt=""/>
                 Submit ticket
                 </button></a></div>
         </div>

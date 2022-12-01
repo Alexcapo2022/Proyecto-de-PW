@@ -28,7 +28,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src="http://localhost:4444/periphereals/g432.jpg"
+            src={`${RUTA_BACKEND}/periphereals/g432.jpg`}
             className="card-img-top"
             alt="..."
           />
@@ -47,7 +47,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src="http://localhost:4444/periphereals/G733.jpg"
+            src={`${RUTA_BACKEND}/periphereals/G733.jpg`}
             className="card-img-top"
             alt="..."
           />
@@ -66,7 +66,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src="http://localhost:4444/periphereals/CLOUD-II.jpg"
+            src={`${RUTA_BACKEND}/periphereals/CLOUD-II.jpg`}
             className="card-img-top"
             alt="..."
           />
@@ -87,7 +87,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src="http://localhost:4444/periphereals/QUADCAST.jpg"
+            src={`${RUTA_BACKEND}/periphereals/QUADCAST.jpg`}
             className="card-img-top"
             alt="..."
           />
@@ -106,7 +106,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src="http://localhost:4444/periphereals/G502HERO.jpg"
+            src={`${RUTA_BACKEND}/periphereals/G502HERO.jpg`}
             className="card-img-top"
             alt="..."
           />
@@ -125,7 +125,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src="http://localhost:4444/periphereals/BASILISK.jpg"
+            src={`${RUTA_BACKEND}/periphereals/BASILISK.jpg`}
             className="card-img-top"
             alt="..."
           />
@@ -146,7 +146,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src="http://localhost:4444/periphereals/BlackWidows.jpg"
+            src={`${RUTA_BACKEND}/periphereals/BlackWidows.jpg`}
             className="card-img-top"
             alt="..."
           />
@@ -165,7 +165,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src="http://localhost:4444/periphereals/Apex.jpg"
+            src={`${RUTA_BACKEND}/periphereals/Apex.jpg`}
             className="card-img-top"
             alt="..."
           />
@@ -184,7 +184,7 @@ const RankingPerifericos = () =>{
           style={{ width: "20rem", backgroundColor: "#4AB4DD" }}
         >
           <img
-            src="http://localhost:4444/periphereals/Teclado-Logitech-ProdigyG213.png"
+            src={`${RUTA_BACKEND}/periphereals/Teclado-Logitech-ProdigyG213.png`}
             className="card-img-top"
             alt="..."
           />

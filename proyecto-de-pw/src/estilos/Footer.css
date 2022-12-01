@@ -1,7 +1,7 @@
 
 .Footer{
     width: 100%;
-    background-image: url("http://localhost:4444/HR/Fondo_monta%C3%B1as.jpg");
+    background-image: url(${RUTA_BACKEND}/HR/Fondo_monta%C3%B1as.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 0px;

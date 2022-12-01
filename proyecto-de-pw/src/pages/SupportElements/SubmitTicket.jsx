@@ -9,7 +9,7 @@ const SubmitTicket =() =>{
 
         const httpGuardarReporte = async (user) => {
         
-            const resp = await fetch("http://localhost:4444/reporte", {
+            const resp = await fetch((`${RUTA_BACKEND}/reporte`), {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

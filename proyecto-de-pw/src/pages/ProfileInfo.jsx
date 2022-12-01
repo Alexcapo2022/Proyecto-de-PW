@@ -20,7 +20,7 @@ const ProfileInfo = () =>{
 
     const httpModificarUsuario = async (user) => {
         
-      const resp = await fetch("http://localhost:4444/registro/:correo", {
+      const resp = await fetch(`${RUTA_BACKEND}/registro/:correo`, {
           method: "PUT",
           headers: {
               "Content-Type": "application/json",

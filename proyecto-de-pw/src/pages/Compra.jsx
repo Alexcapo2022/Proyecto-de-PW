@@ -12,7 +12,7 @@ const Compra = ()=>{
 
   const httpGuardarReseña = async (user) => {
         
-    const resp = await fetch("http://localhost:4444/resena", {
+    const resp = await fetch(`${RUTA_BACKEND}/resena`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
@@ -72,7 +72,7 @@ const Compra = ()=>{
     if(possibleCheckoutItems.length>0){
     return <div id="thankCard" style={{display:done===true?"flex":"none"}}>
       <h1>Thanks for your order!</h1>
-      <img src="http://localhost:4444/imagenes/gracias.gif" alt=""/>
+      <img src={`${RUTA_BACKEND}/imagenes/gracias.gif`} alt=""/>
       <div className="inline">
         <h2>Rate us</h2>
         <button onClick={()=>{setStar(1)}}><img src={star>=1?"/icons/star-filled.png":"/icons/star-unfilled.png"} id="thankCardstar" alt=""/></button>

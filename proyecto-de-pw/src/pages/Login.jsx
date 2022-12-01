@@ -2,6 +2,7 @@ import { Card, Form, Button, Container, Row, Col, Image } from 'react-bootstrap'
 import "bootstrap"
 import '../estilos/login.css'
 import { useState } from "react";
+import { RUTA_BACKEND } from '../../conf';
 
 const Login = () => {
     const [email, setEmail] = useState("");
@@ -9,7 +10,7 @@ const Login = () => {
     const [errorLogin, setErrorLogin] = useState(false)
     
     const httpLogin = async (user) => {
-        const resp = await fetch("http://localhost:4444/login", {
+        const resp = await fetch(`${RUTA_BACKEND}/login`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -20,7 +21,7 @@ const Login = () => {
         if (data.verify) {
             // Login correcto
             alert(`Welcome ${user.email}.`);
-            window.location.href="http://localhost:3000/PaginaPrincipal"; // Redireccion con renderizado
+            window.location.href="/PaginaPrincipal"; // Redireccion con renderizado
             localStorage.setItem("Usuario_correo",user.email)
             
         } else {
@@ -38,7 +39,7 @@ const Login = () => {
                 <Card className= 'cuadro'>
                     <Card.Body>
                         <h2>Login</h2>
-                        <Image className='rounded-circle' display="block"  height="250px" width={300} src='http://localhost:4444/imagenes/usuario.jpg'/>
+                        <Image className='rounded-circle' display="block"  height="250px" width={300} src={`${RUTA_BACKEND}/imagenes/usuario.jpg`}/>
                         <Form>
                             <Form.Group>
                                 <Form.Label>
