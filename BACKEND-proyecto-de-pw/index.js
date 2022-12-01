@@ -8,6 +8,7 @@ const { Usuario,Orden,Categoria,Producto,Orden_Producto,Reporte,Resena,PC_Armado
 
 const PUERTO = 4444
 
+
 const app = express()
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
