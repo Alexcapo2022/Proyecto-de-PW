@@ -69,7 +69,7 @@ const SubmitTicket =() =>{
                             setDescription("");
                             
                         } else {
-                            alert("Completa los formularios correctamente!");
+                            alert("No has completado los formularios correctamente!");
                         }
                         }}>Submit</button>
         </div>
