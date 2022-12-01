@@ -28,7 +28,7 @@ const Registro = () => {
         if (data.verify) {
             // Se registró satisfactoriamente.
             alert("Cuenta registrada satisfactoriamente!");
-            window.location.href="http://localhost:3000/"; // Redireccion con renderizado
+            window.location.href="http://localhost:4444/"; // Redireccion con renderizado
             localStorage.setItem("Usuario_correo",user.email)
             
         } else {
