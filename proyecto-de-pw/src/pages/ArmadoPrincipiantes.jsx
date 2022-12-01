@@ -32,6 +32,36 @@ const ArmadoPrincipiantes = (props) =>{
         props.callback(emoji);
       }
    };
+   /*const Recomendacion = () => {
+    const [PC_Armado_ID, setID] = useState("");
+    const [Nombre, setName] = useState("");
+    const [Descripcion, setDescrip] = useState("");
+  
+    const httpRecomendacion = async (producto) => {
+        const resp = await fetch("http://localhost:4444/PC_armado", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(producto),
+        });
+        const data = await resp.json();
+        if (data.verify) {
+            // Login correcto.
+            setID(true)
+            window.location.href="http://localhost:3000/ArmadoPrincipantes"; // Redireccion con renderizado
+            localStorage.setItem("Producto",producto.PC_Armado_ID)
+            
+        } else {
+            
+            console.log("Error")
+        }
+        // eslint-disable-next-line react-hooks/rules-of-hooks
+        useEffect(()=>{
+          httpRecomendacion()
+        },[])
+
+        */
 /*
    const [listadoPrincipiante,setListadoPrincipainte] = useState ([])
    const httpObtenerOpciones = async () => {
@@ -117,6 +147,6 @@ const ArmadoPrincipiantes = (props) =>{
     </div>
   </div>
   </div>
-    )
-}
+    )}
+
 export default ArmadoPrincipiantes

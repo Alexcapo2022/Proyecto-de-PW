@@ -31,7 +31,7 @@ app.get("/categorias",async (req,resp) => {
 })
 
 // Mostrar Productos
-app.get("/productos",async (req,resp) => {
+/*app.get("/productos",async (req,resp) => {
     const listaProductos = await Producto.findAll()
 
     resp.send(listaProductos)
@@ -44,11 +44,32 @@ app.get("/productos",async (req,resp) => {
             return Sequelize.Producto(item)
         })
     return resp.status(200).send(document)}
-})
+})*/
+let productos = [
+    {
+      id: 1,
+      name: "NVIDIA GeForce GTx MAX",
+      price: 200,
+      stock: 3,
+      Categoria: "gamming"
+    },
+   
+  ];
+  app.get("/productos", (req, res) => {
+    res.send(productos);
+  });
+
 
 // Mostrar PcArmado
 app.get("/pc_armado",async (req,resp) => {
-    const listaPc_armado = await PC_Armado.findAll()
+    const listaPc_armado = await PC_Armado.findAll({
+        where:{
+            Producto_id : PC_Armado_id
+           
+        }
+        
+    })
+    postMessage("Productos predeterminados")
 
     resp.send(listaPc_armado)
 })
