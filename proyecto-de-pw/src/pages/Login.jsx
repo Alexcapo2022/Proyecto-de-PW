@@ -4,12 +4,9 @@ import '../estilos/login.css'
 import { useState } from "react";
 
 const Login = () => {
-    const [name, setName] = useState("");
-    const [lastName, setLastName] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorLogin, setErrorLogin] = useState(false)
-    const [logged,setLogged]=useState(false)
     
     const httpLogin = async (user) => {
         const resp = await fetch("http://localhost:4444/login", {
@@ -21,8 +18,7 @@ const Login = () => {
         });
         const data = await resp.json();
         if (data.verify) {
-            // Login correcto.
-            setLogged(true)
+            // Login correcto
             alert(`Welcome ${user.email}.`);
             window.location.href="http://localhost:3000/PaginaPrincipal"; // Redireccion con renderizado
             localStorage.setItem("Usuario_correo",user.email)
@@ -65,8 +61,6 @@ const Login = () => {
                         user.email = email;
                         user.password = password;
                         httpLogin(user);
-                        setName("");
-                        setLastName("");
                         setEmail("");
                         setPassword("");
                         

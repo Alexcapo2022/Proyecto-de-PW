@@ -103,7 +103,7 @@ const Compra = ()=>{
       </div>
 
       <a href="/PaginaPrincipal"><button id="thankCardbutton" onClick={()=>{deleteItems()}}>Back to menu</button></a>
-      <a href="#"><button id="thankCardbutton" onClick={() => {
+      <a href="#/"><button id="thankCardbutton" onClick={() => {
                             if (puntaje !== "" && comentario !== "") {
                             const user = {};
                             user.puntaje = puntaje;
@@ -127,9 +127,7 @@ const Compra = ()=>{
     </div>
     }
   }
-  const todos = () =>{
-    
-  }
+
   const saveHistory = () =>{
     
     if(possibleCheckoutItems.length>0){
