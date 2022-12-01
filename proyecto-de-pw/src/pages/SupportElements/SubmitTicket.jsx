@@ -45,7 +45,7 @@ const SubmitTicket =() =>{
                                     onChange={(e) => setSubject(e.target.value)}
                                     required/>
             <p>Description</p>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value={description}
+            <textarea class="form-control" id="exampleFormControltarea1" rows="3" value={description}
                                     onChange={(e) => setDescription(e.target.value)}
                                     required></textarea>
             <p></p>
