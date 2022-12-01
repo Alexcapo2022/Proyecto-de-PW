@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { RUTA_BACKEND } from "../conf";
-
+import { RUTA_BACKEND } from '../SupportElements/conf';
 const SubmitTicket =() =>{
         const [name, setName] = useState("");
         const [email, setEmail] = useState("");
@@ -10,7 +9,7 @@ const SubmitTicket =() =>{
 
         const httpGuardarReporte = async (user) => {
         
-            const resp = await fetch((`${RUTA_BACKEND}/reporte`), {
+            const resp = await fetch(`${RUTA_BACKEND}/reporte`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -46,7 +45,7 @@ const SubmitTicket =() =>{
                                     onChange={(e) => setSubject(e.target.value)}
                                     required/>
             <p>Description</p>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" value={description}
+            <textarea class="form-control" id="exampleFormControltarea1" rows="3" value={description}
                                     onChange={(e) => setDescription(e.target.value)}
                                     required></textarea>
             <p></p>
@@ -70,7 +69,7 @@ const SubmitTicket =() =>{
                             setDescription("");
                             
                         } else {
-                            alert("Completa los formularios correctamente!");
+                            alert("No has completado los formularios correctamente!");
                         }
                         }}>Submit</button>
         </div>
