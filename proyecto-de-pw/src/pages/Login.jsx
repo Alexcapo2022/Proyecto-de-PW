@@ -2,7 +2,7 @@ import { Card, Form, Button, Container, Row, Col, Image } from 'react-bootstrap'
 import "bootstrap"
 import '../estilos/login.css'
 import { useState } from "react";
-import { RUTA_BACKEND } from '../../conf';
+import { RUTA_BACKEND } from '../conf';
 
 const Login = () => {
     const [email, setEmail] = useState("");

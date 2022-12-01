@@ -1,6 +1,6 @@
 import '../estilos/ProfileInfo.css'
 import { useState } from "react";
-
+import { RUTA_BACKEND } from '../conf';
 
 const ProfileInfo = () =>{
 

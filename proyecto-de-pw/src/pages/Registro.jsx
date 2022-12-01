@@ -1,7 +1,7 @@
 import { Card, Form, Button, Container, Row, Col} from 'react-bootstrap'
 //import { useParams } from "react-router";
 import { useState } from "react";
-
+import { RUTA_BACKEND } from '../conf';
 const Registro = () => {
 
     //const { usuarioId } = useParams() // hook para obtener el parametro que viene en el path
