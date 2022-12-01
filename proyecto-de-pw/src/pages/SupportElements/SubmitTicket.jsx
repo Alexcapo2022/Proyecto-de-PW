@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { RUTA_BACKEND } from "../conf";
 
 const SubmitTicket =() =>{
         const [name, setName] = useState("");
