@@ -32,7 +32,7 @@ const ArmadoPrincipiantes = (props) =>{
         props.callback(emoji);
       }
    };
-
+/*
    const [listadoPrincipiante,setListadoPrincipainte] = useState ([])
    const httpObtenerOpciones = async () => {
     const resp = await fetch(`http://localhost:4444/PC_armado`)
@@ -45,7 +45,7 @@ const ArmadoPrincipiantes = (props) =>{
    
    useEffect (()=>{
     httpObtenerOpciones()
-},[])
+},[])*/
 
     return(
         <div>
