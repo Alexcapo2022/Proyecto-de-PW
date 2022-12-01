@@ -1,7 +1,6 @@
 import React from "react";
 
-import { useEffect } from "react";
-import { useState } from "react";
+
 import '../estilos/armadoPrincipiantes.css';
 
 
@@ -33,7 +32,7 @@ const ArmadoPrincipiantes = (props) =>{
       }
    };
 
-   const [listadoPrincipiante,setListadoPrincipainte] = useState ([])
+   /*const [listadoPrincipiante,setListadoPrincipainte] = useState ([])
    const httpObtenerOpciones = async () => {
     const resp = await fetch(`http://localhost:4444/PC_armado`)
     
@@ -45,7 +44,7 @@ const ArmadoPrincipiantes = (props) =>{
    
    useEffect (()=>{
     httpObtenerOpciones()
-},[])
+},[])*/
 
     return(
         <div>

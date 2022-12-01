@@ -217,11 +217,6 @@ const RankingPerifericos = () =>{
         </div>
       </div>
     </div>
-    <div style={{ height: 500 }} className="item_container">
-     <Periferiferico periferico={listadoPeriferico}>
-      
-     </Periferiferico>
-    </div>
   </section>
   </div>
     )
